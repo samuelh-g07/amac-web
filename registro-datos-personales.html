@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro · Bolsa de Trabajo AMAC - Datos Personales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="marca-header">
+            <img src="ruta--CAMBIAR" alt="Logotipo AMAC" class="logo-header">
+            <div class="textos-marca">
+                <p class="nombre-empresa-nav">AMAC</p>
+                <p class="descripcion-web-nav">Bolsa de trabajo</p>
+            </div>
+        </div>
+        <nav>
+            <a href="#Vacantes" class="nav-link">Vacantes</a>
+            <a href="#Mis_solicitudes" class="nav-link">Mis solicitudes</a>
+            <a href="inicio_sesion.html" class="nav-link activo" aria-current="page">Iniciar sesión</a>
+            <a href="#Cambiar_rol" class="nav-link">Cambiar rol</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="introduccion-registro">
+            <p class="identificador-pagina">REGISTRO · PASO 1 DE 3</p>
+            <h1>Datos personales</h1>
+            <p>Comencemos con su nombre y fecha de nacimiento.</p>
+        </section>
+
+        <nav class="pasos-registro" aria-label="Pasos del registro">
+            <ol>
+                <li class="paso activo" aria-current="step">
+                    <span class="numero-paso">1</span> Datos personales
+                </li>
+                <li class="paso">
+                    <span class="numero-paso">2</span> Contacto
+                </li>
+                <li class="paso">
+                    <span class="numero-paso">3</span> Experiencia e intereses
+                </li>
+            </ol>
+        </nav>
+
+        <div class="contenedor-registro-usuario"> <!--junta el formulario y el aside para separarlos en columnas en el css-->
+            <section id="registro-usuario">
+                <h2>Cuéntenos sobre usted</h2>
+                <p>Todos los campos de este paso son obligatorios.</p>
+
+                <form method="post" action="registro-contacto.html">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="50"
+                        autocomplete="name" placeholder="Nombre y apellidos" aria-describedby="ayuda-nombre">
+                    <p id="ayuda-nombre">Escríbalos como aparecen en su identificación.</p>
+
+                    <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                    <!--max = hoy menos 60 años (ajustar con JS si se quiere que sea dinámico); min evita fechas absurdas-->
+                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required min="1900-01-01"
+                        max="1966-11-08" aria-describedby="ayuda-fecha">
+                    <p id="ayuda-fecha">Por ejemplo: 15 / 06 / 1960. Este servicio es para personas de 60 años y más.</p>
+
+                    <button type="submit" class="enviar">Continuar</button>
+                </form>
+                <a href="inicio_sesion.html" class="boton-regresar">Regresar</a>
+            </section>
+
+            <aside>
+                <section class="apoyo">
+                    <img src="info.png--CAMBIAR" alt="Símbolo de información">
+                    <p>Su experiencia es valiosa. No necesita un currículum para crear su cuenta.</p>
+                </section>
+                <section class="tarjeta-ritmo">
+                    <h2>Vamos a su ritmo</h2>
+                    <p>Después le pediremos sus datos de contacto y los trabajos que le interesan.</p>
+                    <p>Revise sus datos antes de continuar. Puede regresar al paso anterior.</p>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <a href="tel:+528100000000" class="ayuda">
+        <img src="telefono.png--CAMBIAR" alt="Símbolo de teléfono">
+        ¿Necesita ayuda? Llámenos
+    </a>
+
+    <footer>
+        <p>AMAC · Empleo para personas de 60 años y más</p>
+        <p>Monterrey y su zona metropolitana, Nuevo León</p>
+    </footer>
+</body>
+
+</html>
