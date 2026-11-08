@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recepcionista | AMAC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+  <header class="encabezado">
+    <div class="contenedor encabezado__interno">
+      <a class="marca" href="index.html">
+        <img class="marca__logo" src="img/marca-amac.png" width="96" height="48" alt="">
+        <span class="marca__textos">
+          <span class="marca__nombre">AMAC</span>
+          <span class="marca__seccion">Bolsa de trabajo</span>
+        </span>
+      </a>
+      <input class="menu-control" type="checkbox" id="abrir-menu">
+      <label class="menu__boton" for="abrir-menu">
+        <img class="icono" src="img/icono-menu.svg" width="24" height="24" alt="">
+        Menú
+      </label>
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <ul class="nav-principal__lista">
+          <li><a href="index.html">Vacantes</a></li>
+          <li><a href="mis-solicitudes.html">Mis solicitudes</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="principal" id="principal" tabindex="-1">
+    <div class="contenedor">
+      <a class="volver" href="index.html">← Regresar a vacantes</a>
+      <header class="presentacion">
+        <p class="kicker">Vacante · Medio tiempo</p>
+        <h1>Recepcionista</h1>
+        <p>Centro Médico del Valle</p>
+      </header>
+
+      <div class="rejilla-detalle">
+        <article class="panel">
+          <h2>Un trato amable hace la diferencia</h2>
+          <p>Buscamos a una persona organizada para recibir a nuestros pacientes y apoyar al equipo de recepción. Valoramos su experiencia, paciencia y disposición para ayudar.</p>
+          <section class="bloque-texto">
+            <h2>¿Qué hará?</h2>
+            <ul class="lista-puntos">
+              <li>Dar la bienvenida y orientar a los pacientes.</li>
+              <li>Contestar llamadas y agendar citas en computadora.</li>
+              <li>Confirmar horarios y mantener ordenados los registros de recepción.</li>
+            </ul>
+          </section>
+          <section class="bloque-texto">
+            <h2>Requisitos</h2>
+            <ul class="lista-puntos">
+              <li>Trato respetuoso y comunicación clara.</li>
+              <li>Lectura y escritura; manejo básico de computadora.</li>
+              <li>Experiencia en recepción o atención al público, deseable. Le acompañamos durante su capacitación.</li>
+              <li>Disponibilidad de lunes a viernes, de 9:00 a 14:00.</li>
+            </ul>
+          </section>
+          <section class="bloque-texto">
+            <h2>Prestaciones</h2>
+            <ul class="lista-puntos">
+              <li>Sueldo fijo de $10,500 MXN al mes.</li>
+              <li>Alta en el IMSS y prestaciones de ley.</li>
+              <li>Aguinaldo, vacaciones y prima vacacional.</li>
+              <li>Capacitación pagada y espacio de trabajo accesible.</li>
+            </ul>
+          </section>
+          <p class="mensaje-info">
+            <img class="icono" src="img/icono-info.svg" width="24" height="24" alt="">
+            <span>Su experiencia cuenta. La selección se basa en sus habilidades y en lo que necesita el puesto.</span>
+          </p>
+        </article>
+
+        <aside class="pila-amplia">
+          <section class="panel">
+            <h2>Lo que debe saber</h2>
+            <p class="dato-fuerte">$10,500 MXN al mes</p>
+            <p class="dato-con-icono">
+              <img class="icono" src="img/icono-ubicacion.svg" width="24" height="24" alt="">
+              <span>Col. Del Valle · San Pedro Garza García, N.L.</span>
+            </p>
+            <p class="dato-con-icono">
+              <img class="icono" src="img/icono-reloj.svg" width="24" height="24" alt="">
+              <span>Lunes a viernes, 9:00 a 14:00</span>
+            </p>
+            <p>Medio tiempo · Presencial</p>
+            <p>Publicada el 24 de octubre de 2026</p>
+            <a class="boton boton--primario" href="mis-solicitudes.html">Postularme</a>
+            <a class="boton boton--secundario" href="tel:+528183001050">Llamar</a>
+            <a class="boton boton--secundario" href="login.html">Guardar y continuar</a>
+          </section>
+          <p class="mensaje-info">
+            <img class="icono" src="img/icono-escudo.svg" width="24" height="24" alt="">
+            <span>Postularse no tiene costo. Nunca le pediremos dinero para participar.</span>
+          </p>
+          <p>Vacante de ejemplo · Empresa ficticia</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <div class="zona-ayuda">
+    <div class="contenedor zona-ayuda__interno">
+      <a class="boton-ayuda" href="tel:+528180002026">
+        <img class="icono" src="img/icono-telefono.svg" width="24" height="24" alt="">
+        <span>¿Necesita ayuda?<br class="solo-movil"> Llámenos<span class="solo-lectores"> al 81 8000 2026</span></span>
+      </a>
+    </div>
+  </div>
+
+  <footer class="pie">
+    <div class="contenedor pie__interno">
+      <p>AMAC · Empleo para personas de 60 años y más</p>
+      <p>Monterrey y su zona metropolitana, Nuevo León</p>
+      <div class="contraste">
+        <input type="checkbox" id="alto-contraste">
+        <label for="alto-contraste">Alto contraste</label>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

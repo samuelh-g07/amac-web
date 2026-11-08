@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página no encontrada | AMAC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+  <header class="encabezado">
+    <div class="contenedor encabezado__interno">
+      <a class="marca" href="index.html">
+        <img class="marca__logo" src="img/marca-amac.png" width="96" height="48" alt="">
+        <span class="marca__textos">
+          <span class="marca__nombre">AMAC</span>
+          <span class="marca__seccion">Bolsa de trabajo</span>
+        </span>
+      </a>
+      <input class="menu-control" type="checkbox" id="abrir-menu">
+      <label class="menu__boton" for="abrir-menu">
+        <img class="icono" src="img/icono-menu.svg" width="24" height="24" alt="">
+        Menú
+      </label>
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <ul class="nav-principal__lista">
+          <li><a href="index.html">Vacantes</a></li>
+          <li><a href="mis-solicitudes.html">Mis solicitudes</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="principal" id="principal" tabindex="-1">
+    <div class="contenedor">
+      <header class="presentacion">
+        <p class="kicker">Error 404</p>
+        <h1>No encontramos esta página</h1>
+        <p>La dirección no existe o ya no está disponible. Puede volver a las vacantes y seguir buscando.</p>
+      </header>
+      <section class="mensaje-pagina">
+        <h2>¿Qué puede hacer?</h2>
+        <p>Revise si la dirección está completa o regrese al listado de empleos.</p>
+        <a class="boton boton--primario boton--auto" href="index.html">Ver vacantes</a>
+      </section>
+    </div>
+  </main>
+
+  <div class="zona-ayuda">
+    <div class="contenedor zona-ayuda__interno">
+      <a class="boton-ayuda" href="tel:+528180002026">
+        <img class="icono" src="img/icono-telefono.svg" width="24" height="24" alt="">
+        <span>¿Necesita ayuda?<br class="solo-movil"> Llámenos<span class="solo-lectores"> al 81 8000 2026</span></span>
+      </a>
+    </div>
+  </div>
+
+  <footer class="pie">
+    <div class="contenedor pie__interno">
+      <p>AMAC · Empleo para personas de 60 años y más</p>
+      <p>Monterrey y su zona metropolitana, Nuevo León</p>
+      <div class="contraste">
+        <input type="checkbox" id="alto-contraste">
+        <label for="alto-contraste">Alto contraste</label>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de candidato | AMAC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+  <header class="encabezado">
+    <div class="contenedor encabezado__interno">
+      <a class="marca" href="index.html">
+        <img class="marca__logo" src="img/marca-amac.png" width="96" height="48" alt="">
+        <span class="marca__textos">
+          <span class="marca__nombre">AMAC</span>
+          <span class="marca__seccion">Bolsa de trabajo</span>
+        </span>
+      </a>
+      <input class="menu-control" type="checkbox" id="abrir-menu">
+      <label class="menu__boton" for="abrir-menu">
+        <img class="icono" src="img/icono-menu.svg" width="24" height="24" alt="">
+        Menú
+      </label>
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <ul class="nav-principal__lista">
+          <li><a href="index.html">Vacantes</a></li>
+          <li><a href="mis-solicitudes.html">Mis solicitudes</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="principal" id="principal" tabindex="-1">
+    <div class="contenedor">
+      <header class="presentacion">
+        <p class="kicker">Registro de candidato</p>
+        <h1>Crear cuenta</h1>
+        <p>Complete sus datos personales, su contacto, su dirección y su experiencia. Puede avanzar a su ritmo.</p>
+      </header>
+
+      <ol class="etapas" aria-label="Partes del registro">
+        <li class="etapa etapa--actual"><span class="etapa__numero">1</span> Datos personales</li>
+        <li class="etapa"><span class="etapa__numero">2</span> Contacto y dirección</li>
+        <li class="etapa"><span class="etapa__numero">3</span> Experiencia e intereses</li>
+      </ol>
+
+      <form action="login.html" method="get">
+        <div class="rejilla-formulario">
+          <div class="pila-amplia">
+            <fieldset class="panel">
+              <legend class="solo-lectores">Datos personales</legend>
+              <h2>Datos personales</h2>
+              <p>Todos los campos de este paso son obligatorios.</p>
+              <div class="campo-formulario">
+                <label for="nombre">Nombre completo</label>
+                <input id="nombre" type="text" autocomplete="name" placeholder="Nombre y apellidos" required>
+                <p class="campo-formulario__ayuda">Escríbalos como aparecen en su identificación.</p>
+              </div>
+              <div class="campo-formulario">
+                <label for="nacimiento">Fecha de nacimiento</label>
+                <input id="nacimiento" type="date" autocomplete="bday" required>
+                <p class="campo-formulario__ayuda">Por ejemplo: 15 / 06 / 1960. Este servicio es para personas de 60 años y más.</p>
+              </div>
+            </fieldset>
+
+            <fieldset class="panel">
+              <legend class="solo-lectores">Contacto</legend>
+              <h2>Contacto</h2>
+              <p>Indique cómo podemos comunicarnos con usted. Todos los campos de este paso son obligatorios.</p>
+              <div class="campo-formulario">
+                <label for="telefono">Teléfono</label>
+                <input id="telefono" type="tel" inputmode="tel" autocomplete="tel" placeholder="10 dígitos" required>
+                <p class="campo-formulario__ayuda">Incluya la clave de su ciudad. No agregue espacios.</p>
+              </div>
+              <div class="campo-formulario">
+                <label for="correo">Correo electrónico</label>
+                <input id="correo" type="email" autocomplete="email" placeholder="nombre@correo.com" required>
+                <p class="campo-formulario__ayuda">Aquí recibirá avisos sobre sus solicitudes.</p>
+              </div>
+              <fieldset class="grupo">
+                <legend>Medio de contacto preferido</legend>
+                <div class="casilla">
+                  <input type="radio" id="contacto-telefono" name="contacto" required>
+                  <label for="contacto-telefono">Teléfono</label>
+                </div>
+                <div class="casilla">
+                  <input type="radio" id="contacto-correo" name="contacto">
+                  <label for="contacto-correo">Correo electrónico</label>
+                </div>
+              </fieldset>
+              <div class="campo-formulario">
+                <label for="contrasena">Contraseña</label>
+                <input id="contrasena" type="password" autocomplete="new-password" placeholder="Cree una contraseña" minlength="8" required>
+                <p class="campo-formulario__ayuda">Use al menos 8 caracteres. Combine letras y números.</p>
+              </div>
+              <div class="casilla">
+                <input type="checkbox" id="mostrar-contrasena">
+                <label for="mostrar-contrasena">Mostrar contraseña</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="panel">
+              <legend class="solo-lectores">Dirección</legend>
+              <h2>Dirección</h2>
+              <div class="campo-formulario">
+                <label for="calle">Calle y número</label>
+                <input id="calle" type="text" autocomplete="address-line1" required>
+                <p class="campo-formulario__ayuda">Escriba la calle y el número de su domicilio.</p>
+              </div>
+              <div class="campo-formulario">
+                <label for="colonia">Colonia</label>
+                <input id="colonia" type="text" autocomplete="address-level3" required>
+              </div>
+              <div class="campo-formulario">
+                <label for="municipio">Municipio</label>
+                <select id="municipio" autocomplete="address-level2" required>
+                  <option value="">Elija un municipio</option>
+                  <option>Monterrey</option>
+                  <option>San Pedro Garza García</option>
+                  <option>Guadalupe</option>
+                  <option>San Nicolás de los Garza</option>
+                  <option>Apodaca</option>
+                  <option>Santa Catarina</option>
+                  <option>General Escobedo</option>
+                  <option>García</option>
+                </select>
+                <p class="campo-formulario__ayuda">Elija el municipio donde vive.</p>
+              </div>
+            </fieldset>
+
+            <fieldset class="panel">
+              <legend class="solo-lectores">Experiencia e intereses</legend>
+              <h2>Experiencia e intereses</h2>
+              <div class="campo-formulario">
+                <label for="experiencia">Experiencia laboral (opcional)</label>
+                <textarea id="experiencia" placeholder="Cuéntenos en qué ha trabajado o qué sabe hacer."></textarea>
+                <p class="campo-formulario__ayuda">Puede incluir empleos, oficios, trabajo en casa o voluntariado.</p>
+              </div>
+              <fieldset class="grupo">
+                <legend>Áreas de interés</legend>
+                <p>Elija una o más opciones.</p>
+                <div class="casilla">
+                  <input type="checkbox" id="interes-publico">
+                  <label for="interes-publico">Atención al público</label>
+                </div>
+                <div class="casilla">
+                  <input type="checkbox" id="interes-admin">
+                  <label for="interes-admin">Administración y recepción</label>
+                </div>
+                <div class="casilla">
+                  <input type="checkbox" id="interes-ventas">
+                  <label for="interes-ventas">Ventas</label>
+                </div>
+                <div class="casilla">
+                  <input type="checkbox" id="interes-biblio">
+                  <label for="interes-biblio">Bibliotecas y educación</label>
+                </div>
+                <div class="casilla">
+                  <input type="checkbox" id="interes-empaque">
+                  <label for="interes-empaque">Empaque y apoyo general</label>
+                </div>
+                <div class="casilla">
+                  <input type="checkbox" id="interes-telefono">
+                  <label for="interes-telefono">Atención telefónica</label>
+                </div>
+              </fieldset>
+              <div class="casilla">
+                <input type="checkbox" id="terminos" required>
+                <label for="terminos">Acepto el Aviso de privacidad y los Términos de uso de AMAC.</label>
+              </div>
+              <button class="boton boton--primario" type="submit">Crear mi cuenta</button>
+              <a class="boton boton--secundario" href="login.html">Regresar</a>
+            </fieldset>
+          </div>
+
+          <aside class="pila-amplia">
+            <p class="mensaje-info">
+              <img class="icono" src="img/icono-info.svg" width="24" height="24" alt="">
+              <span>Su experiencia es valiosa. No necesita un currículum para crear su cuenta.</span>
+            </p>
+            <section class="panel">
+              <h2>Vamos a su ritmo</h2>
+              <p>Después de sus datos personales, complete su contacto, su dirección y los trabajos que le interesan.</p>
+              <p>Revise sus datos antes de crear la cuenta. Puede regresar al inicio de sesión.</p>
+            </section>
+            <p class="mensaje-info">
+              <img class="icono" src="img/icono-escudo.svg" width="24" height="24" alt="">
+              <span>Sus datos se compartirán con una empresa solo cuando usted se postule a su vacante.</span>
+            </p>
+            <section class="panel">
+              <h2>Cuide su contraseña</h2>
+              <p>Elija una que pueda recordar y no la comparta con otras personas.</p>
+              <p>AMAC nunca le pedirá su contraseña por teléfono.</p>
+            </section>
+            <section class="panel">
+              <h2>Puede escribir algo así</h2>
+              <p>“Atendí una tienda durante 15 años. Sé recibir clientes, organizar productos y llevar registros.”</p>
+              <p>Escriba con sus propias palabras. No hay una respuesta incorrecta.</p>
+            </section>
+          </aside>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <div class="zona-ayuda">
+    <div class="contenedor zona-ayuda__interno">
+      <a class="boton-ayuda" href="tel:+528180002026">
+        <img class="icono" src="img/icono-telefono.svg" width="24" height="24" alt="">
+        <span>¿Necesita ayuda?<br class="solo-movil"> Llámenos<span class="solo-lectores"> al 81 8000 2026</span></span>
+      </a>
+    </div>
+  </div>
+
+  <footer class="pie">
+    <div class="contenedor pie__interno">
+      <p>AMAC · Empleo para personas de 60 años y más</p>
+      <p>Monterrey y su zona metropolitana, Nuevo León</p>
+      <div class="contraste">
+        <input type="checkbox" id="alto-contraste">
+        <label for="alto-contraste">Alto contraste</label>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

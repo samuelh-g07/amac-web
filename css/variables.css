@@ -1,0 +1,39 @@
+:root {
+  /* Colores tomados del sistema de diseño AMAC en Figma */
+  --color-primario: #202945;
+  --color-primario-oscuro: #151c31;
+  --color-texto: #202945;
+  --color-fondo: #ffffff;
+  --color-acento: #ff815c;
+  --color-info: #cae4ef;
+  --color-borde: #a8a8a8;
+  --color-ayuda: #ff815c;
+  --color-ayuda-texto: #202945;
+  --color-en-primario: #ffffff;
+  --color-exito: #202945;
+  --color-error: #ff815c;
+
+  /* Tipografía del prototipo. El tamaño base equivale a 18 px. */
+  --fuente-base: "Work Sans", system-ui, sans-serif;
+  --fuente-titulo: "Libre Baskerville", Georgia, serif;
+  --texto-base: 1.125rem;
+  --texto-h2: 1.5rem;
+  --texto-h1: 2rem;
+  --texto-kicker: 1.125rem;
+
+  /* Espaciados y bordes */
+  --espacio-xs: 0.5rem;
+  --espacio-s: 0.75rem;
+  --espacio-m: 1rem;
+  --espacio-l: 1.5rem;
+  --espacio-xl: 2rem;
+  --espacio-2xl: 3rem;
+  --radio-control: 0.5rem;
+  --radio: 0.75rem;
+  --radio-panel: 1rem;
+  --radio-pastilla: 2rem;
+  --sombra-foco: 0 0 0 3px var(--color-acento);
+  --ancho-contenido: 75rem;
+  --alto-control: 3.5rem;
+  --alto-toque: 2.75rem;
+}

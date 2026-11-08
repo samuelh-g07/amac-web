@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión | AMAC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+  <header class="encabezado">
+    <div class="contenedor encabezado__interno">
+      <a class="marca" href="index.html">
+        <img class="marca__logo" src="img/marca-amac.png" width="96" height="48" alt="">
+        <span class="marca__textos">
+          <span class="marca__nombre">AMAC</span>
+          <span class="marca__seccion">Bolsa de trabajo</span>
+        </span>
+      </a>
+      <input class="menu-control" type="checkbox" id="abrir-menu">
+      <label class="menu__boton" for="abrir-menu">
+        <img class="icono" src="img/icono-menu.svg" width="24" height="24" alt="">
+        Menú
+      </label>
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <ul class="nav-principal__lista">
+          <li><a href="index.html">Vacantes</a></li>
+          <li><a href="mis-solicitudes.html">Mis solicitudes</a></li>
+          <li><a href="login.html" aria-current="page">Iniciar sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="principal" id="principal" tabindex="-1">
+    <div class="contenedor">
+      <header class="presentacion">
+        <p class="kicker">Bienvenido a AMAC</p>
+        <h1>Iniciar sesión</h1>
+        <p>Entre a su cuenta para postularse y consultar sus solicitudes.</p>
+      </header>
+
+      <div class="rejilla-2">
+        <form class="panel" action="mis-solicitudes.html" method="get">
+          <div class="campo-formulario">
+            <label for="correo">Correo electrónico</label>
+            <input id="correo" type="email" autocomplete="email" placeholder="nombre@correo.com" required>
+            <p class="campo-formulario__ayuda" id="correo-ayuda">Ejemplo: nombre@correo.com</p>
+          </div>
+          <div class="campo-formulario">
+            <label for="contrasena">Contraseña</label>
+            <input id="contrasena" type="password" autocomplete="current-password" placeholder="Escriba su contraseña" required>
+          </div>
+          <div class="casilla">
+            <input type="checkbox" id="mostrar-contrasena">
+            <label for="mostrar-contrasena">Mostrar contraseña</label>
+          </div>
+          <button class="boton boton--primario" type="submit">Entrar</button>
+          <button class="enlace-accion" type="button">¿Olvidó su contraseña?</button>
+        </form>
+
+        <div class="pila-amplia">
+          <section class="panel">
+            <h2>¿Es su primera visita?</h2>
+            <p>Regístrese para compartir su experiencia y encontrar oportunidades cerca de usted.</p>
+            <a class="boton boton--secundario" href="registro-candidato.html">Soy candidato: crear cuenta</a>
+            <a class="boton boton--secundario" href="empresa-vacantes.html">Soy empresa: registrar mi empresa</a>
+          </section>
+          <p class="mensaje-info">
+            <img class="icono" src="img/icono-info.svg" width="24" height="24" alt="">
+            <span>Si necesita apoyo para entrar, puede llamarnos. Le acompañamos paso a paso.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="zona-ayuda">
+    <div class="contenedor zona-ayuda__interno">
+      <a class="boton-ayuda" href="tel:+528180002026">
+        <img class="icono" src="img/icono-telefono.svg" width="24" height="24" alt="">
+        <span>¿Necesita ayuda?<br class="solo-movil"> Llámenos<span class="solo-lectores"> al 81 8000 2026</span></span>
+      </a>
+    </div>
+  </div>
+
+  <footer class="pie">
+    <div class="contenedor pie__interno">
+      <p>AMAC · Empleo para personas de 60 años y más</p>
+      <p>Monterrey y su zona metropolitana, Nuevo León</p>
+      <div class="contraste">
+        <input type="checkbox" id="alto-contraste">
+        <label for="alto-contraste">Alto contraste</label>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
