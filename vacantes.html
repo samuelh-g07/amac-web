@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vacantes disponibles | AMAC</title>
+  <meta name="description" content="Encuentre empleo en Monterrey y su zona metropolitana. Vacantes para personas de 60 años y más.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+  <header class="encabezado contenedor">
+    <a class="marca" href="index.html">
+      <img class="marca__logo" src="img/logo-amac.png" alt="" width="669" height="333">
+      <span class="marca__texto">
+        <span class="marca__nombre">AMAC</span>
+        <span class="marca__lema">Bolsa de trabajo</span>
+      </span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <a class="menu-movil solo-movil" href="menu.html">
+        <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <span>Menú</span>
+      </a>
+      <ul class="nav-lista">
+        <li><a href="index.html" aria-current="page">Vacantes</a></li>
+        <li><a href="mis-solicitudes.html">Mis solicitudes</a></li>
+        <li><a class="nav-lista__destacado" href="login.html">Iniciar sesión</a></li>
+        <li><a class="nav-lista__destacado" href="#">Cambiar rol</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="principal" class="pagina pagina--listado contenedor">
+
+    <header class="cabecera-pagina">
+      <p class="sobretitulo">Su experiencia tiene un lugar</p>
+      <h1>Encuentre su próximo empleo</h1>
+      <p>Oportunidades para personas de 60 años y más en Monterrey y su zona metropolitana.</p>
+    </header>
+
+    <form class="tarjeta buscador" role="search" action="index.html" method="get">
+      <label for="busqueda">¿Qué trabajo busca?</label>
+      <input type="search" id="busqueda" name="q" placeholder="Puesto o palabra clave" autocomplete="off">
+      <button class="boton boton--primario" type="submit">Buscar</button>
+    </form>
+
+    <p class="nota-ejemplo">Datos de ejemplo: las empresas y vacantes de este diseño son ficticias.</p>
+
+    <a class="boton boton--secundario solo-movil" href="filtros.html">Filtrar vacantes</a>
+
+    <aside class="panel-lateral" aria-labelledby="titulo-filtros">
+      <form class="tarjeta formulario-filtros" action="index.html" method="get">
+        <h2 class="tarjeta__titulo" id="titulo-filtros">Filtrar vacantes</h2>
+
+        <p class="campo-formulario">
+          <label for="municipio">Municipio</label>
+          <select id="municipio" name="municipio">
+            <option value="">Todos los municipios</option>
+            <option value="Monterrey">Monterrey</option>
+            <option value="San Pedro Garza García">San Pedro Garza García</option>
+            <option value="Guadalupe">Guadalupe</option>
+            <option value="San Nicolás de los Garza">San Nicolás de los Garza</option>
+            <option value="Apodaca">Apodaca</option>
+            <option value="Santa Catarina">Santa Catarina</option>
+            <option value="General Escobedo">General Escobedo</option>
+          </select>
+        </p>
+
+        <fieldset class="grupo-opciones">
+          <legend>Tipo de jornada</legend>
+          <label class="opcion" for="jornada-completo">
+            <input type="checkbox" id="jornada-completo" name="jornada" value="tiempo-completo">
+            <span>Tiempo completo</span>
+          </label>
+          <label class="opcion" for="jornada-medio">
+            <input type="checkbox" id="jornada-medio" name="jornada" value="medio-tiempo">
+            <span>Medio tiempo</span>
+          </label>
+          <label class="opcion" for="jornada-horas">
+            <input type="checkbox" id="jornada-horas" name="jornada" value="por-horas">
+            <span>Por horas</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="grupo-opciones">
+          <legend>Modalidad</legend>
+          <label class="opcion" for="modalidad-presencial">
+            <input type="checkbox" id="modalidad-presencial" name="modalidad" value="presencial">
+            <span>Presencial</span>
+          </label>
+          <label class="opcion" for="modalidad-casa">
+            <input type="checkbox" id="modalidad-casa" name="modalidad" value="desde-casa">
+            <span>Desde casa</span>
+          </label>
+        </fieldset>
+
+        <p class="formulario-filtros__acciones">
+          <button class="boton boton--primario boton--bloque" type="submit">Aplicar filtros</button>
+          <button class="boton boton--texto" type="reset">Limpiar filtros</button>
+        </p>
+      </form>
+      <p class="aviso-info">
+        <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v5.5"/><circle cx="12" cy="7.75" r="0.6" fill="currentColor"/></svg>
+        <span>Elija un empleo que se adapte a sus horarios e intereses.</span>
+      </p>
+    </aside>
+
+    <section class="resultados" aria-labelledby="titulo-resultados">
+      <h2 id="titulo-resultados">12 vacantes encontradas</h2>
+
+      <ul class="lista-vacantes">
+        <li>
+          <article class="tarjeta tarjeta-vacante">
+            <h3 class="tarjeta-vacante__titulo">Recepcionista</h3>
+            <p class="tarjeta-vacante__empresa">Centro Médico del Valle</p>
+            <p class="tarjeta-vacante__ubicacion">Col. Del Valle · San Pedro Garza García, N.L.</p>
+            <p class="tarjeta-vacante__jornada">Medio tiempo · Presencial</p>
+            <p class="tarjeta-vacante__sueldo">$10,500 MXN al mes</p>
+            <p class="tarjeta-vacante__horario">Lunes a viernes, 9:00 a 14:00</p>
+            <p class="tarjeta-vacante__fecha">Publicada el <time datetime="2026-10-24">24 de octubre de 2026</time></p>
+            <a class="boton boton--secundario tarjeta-vacante__boton" href="vacante.html">Ver detalle<span class="solo-lectores"> de Recepcionista, Centro Médico del Valle</span></a>
+          </article>
+        </li>
+        <li>
+          <article class="tarjeta tarjeta-vacante">
+            <h3 class="tarjeta-vacante__titulo">Asesor de ventas</h3>
+            <p class="tarjeta-vacante__empresa">Casa Hogar del Norte</p>
+            <p class="tarjeta-vacante__ubicacion">Col. Mitras Centro · Monterrey, N.L.</p>
+            <p class="tarjeta-vacante__jornada">Tiempo completo · Presencial</p>
+            <p class="tarjeta-vacante__sueldo">$13,000 MXN al mes</p>
+            <p class="tarjeta-vacante__horario">Lunes a viernes, 9:00 a 17:00</p>
+            <p class="tarjeta-vacante__fecha">Publicada el <time datetime="2026-10-23">23 de octubre de 2026</time></p>
+            <a class="boton boton--secundario tarjeta-vacante__boton" href="vacante.html">Ver detalle<span class="solo-lectores"> de Asesor de ventas, Casa Hogar del Norte</span></a>
+          </article>
+        </li>
+        <li>
+          <article class="tarjeta tarjeta-vacante">
+            <h3 class="tarjeta-vacante__titulo">Auxiliar de biblioteca</h3>
+            <p class="tarjeta-vacante__empresa">Lecturas de la Sierra</p>
+            <p class="tarjeta-vacante__ubicacion">Col. Obispado · Monterrey, N.L.</p>
+            <p class="tarjeta-vacante__jornada">Medio tiempo · Presencial</p>
+            <p class="tarjeta-vacante__sueldo">$9,000 MXN al mes</p>
+            <p class="tarjeta-vacante__horario">Lunes a viernes, 9:00 a 14:00</p>
+            <p class="tarjeta-vacante__fecha">Publicada el <time datetime="2026-10-23">23 de octubre de 2026</time></p>
+            <a class="boton boton--secundario tarjeta-vacante__boton" href="vacante.html">Ver detalle<span class="solo-lectores"> de Auxiliar de biblioteca, Lecturas de la Sierra</span></a>
+          </article>
+        </li>
+        <li>
+          <article class="tarjeta tarjeta-vacante">
+            <h3 class="tarjeta-vacante__titulo">Empacador</h3>
+            <p class="tarjeta-vacante__empresa">Mercado Buen Día</p>
+            <p class="tarjeta-vacante__ubicacion">Col. Centro · Guadalupe, N.L.</p>
+            <p class="tarjeta-vacante__jornada">Por horas · Presencial</p>
+            <p class="tarjeta-vacante__sueldo">$7,000 MXN al mes</p>
+            <p class="tarjeta-vacante__horario">Lunes a viernes, 10:00 a 14:00</p>
+            <p class="tarjeta-vacante__fecha">Publicada el <time datetime="2026-10-22">22 de octubre de 2026</time></p>
+            <a class="boton boton--secundario tarjeta-vacante__boton" href="vacante.html">Ver detalle<span class="solo-lectores"> de Empacador, Mercado Buen Día</span></a>
+          </article>
+        </li>
+        <li>
+          <article class="tarjeta tarjeta-vacante">
+            <h3 class="tarjeta-vacante__titulo">Cajero</h3>
+            <p class="tarjeta-vacante__empresa">Papelería Horizonte</p>
+            <p class="tarjeta-vacante__ubicacion">Col. Anáhuac · San Nicolás de los Garza, N.L.</p>
+            <p class="tarjeta-vacante__jornada">Tiempo completo · Presencial</p>
+            <p class="tarjeta-vacante__sueldo">$12,000 MXN al mes</p>
+            <p class="tarjeta-vacante__horario">Lunes a viernes, 10:00 a 18:00</p>
+            <p class="tarjeta-vacante__fecha">Publicada el <time datetime="2026-10-21">21 de octubre de 2026</time></p>
+            <a class="boton boton--secundario tarjeta-vacante__boton" href="vacante.html">Ver detalle<span class="solo-lectores"> de Cajero, Papelería Horizonte</span></a>
+          </article>
+        </li>
+        <li>
+          <article class="tarjeta tarjeta-vacante">
+            <h3 class="tarjeta-vacante__titulo">Atención telefónica desde casa</h3>
+            <p class="tarjeta-vacante__empresa">Conecta Contigo</p>
+            <p class="tarjeta-vacante__ubicacion">Col. Centro · Monterrey, N.L.</p>
+            <p class="tarjeta-vacante__jornada">Medio tiempo · Desde casa</p>
+            <p class="tarjeta-vacante__sueldo">$9,500 MXN al mes</p>
+            <p class="tarjeta-vacante__horario">Lunes a viernes, 9:00 a 14:00</p>
+            <p class="tarjeta-vacante__fecha">Publicada el <time datetime="2026-10-20">20 de octubre de 2026</time></p>
+            <a class="boton boton--secundario tarjeta-vacante__boton" href="vacante.html">Ver detalle<span class="solo-lectores"> de Atención telefónica desde casa, Conecta Contigo</span></a>
+          </article>
+        </li>
+      </ul>
+
+      <nav class="tarjeta paginacion" aria-label="Paginación de vacantes">
+        <p class="paginacion__resumen">Mostrando 1–6 de 12</p>
+        <ul class="paginacion__lista">
+          <li><a class="boton boton--primario boton--pagina" href="index.html" aria-current="page"><span class="solo-lectores">Página </span>1</a></li>
+          <li><a class="boton boton--secundario boton--pagina" href="index.html?pagina=2"><span class="solo-lectores">Página </span>2</a></li>
+        </ul>
+        <a class="boton boton--secundario boton--bloque" href="index.html?pagina=2">Siguiente página</a>
+      </nav>
+    </section>
+
+  </main>
+
+  <a class="boton-ayuda" href="tel:+528100000000">
+    <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3.5l1.8 4.5-2.2 1.4a11 11 0 0 0 6 6l1.4-2.2L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A15.5 15.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></svg>
+    <span class="boton-ayuda__texto"><span>¿Necesita ayuda?</span> <span>Llámenos</span></span>
+  </a>
+
+  <footer class="pie contenedor">
+    <p>AMAC · Empleo para personas de 60 años y más</p>
+    <p>Monterrey y su zona metropolitana, Nuevo León</p>
+  </footer>
+</body>
+</html>

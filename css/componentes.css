@@ -1,0 +1,212 @@
+/* ==========================================================
+   componentes.css — piezas reutilizables (futuros componentes React)
+   .boton · .tarjeta · .tarjeta-vacante · .campo-formulario
+   .opcion · .aviso-info · .buscador · .paginacion · .boton-ayuda
+   ========================================================== */
+
+/* ---------- Iconos ---------- */
+.icono {
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* ---------- Botones ---------- */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--alto-control);
+  padding: 0.75rem 1.5rem;
+  font-size: var(--texto-base);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid var(--color-principal);
+  border-radius: var(--radio-boton);
+  cursor: pointer;
+}
+.boton--primario { background: var(--color-principal); color: #fff; }
+.boton--primario:hover { background: var(--color-principal-hover); }
+.boton--secundario { background: var(--color-fondo); color: var(--color-principal); }
+.boton--secundario:hover { background: var(--color-hover-suave); }
+.boton--bloque { width: 100%; }
+.boton--pagina { min-width: var(--alto-control); padding-inline: 0; }
+.boton--texto {
+  justify-content: flex-start;
+  min-height: var(--alto-toque);
+  padding-inline: 0;
+  border-color: transparent;
+  background: none;
+  font-size: var(--texto-apoyo);
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+/* ---------- Tarjeta genérica ---------- */
+.tarjeta {
+  background: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-tarjeta);
+  padding: var(--espacio-ml);
+}
+.tarjeta__titulo { font-size: var(--texto-h2); }
+
+/* ---------- Tarjeta de vacante ---------- */
+.tarjeta-vacante { display: grid; gap: 0.625rem; }
+.tarjeta-vacante > * { min-width: 0; }
+.tarjeta-vacante__titulo { margin-bottom: 0.125rem; }
+.tarjeta-vacante__empresa,
+.tarjeta-vacante__jornada,
+.tarjeta-vacante__sueldo { font-size: var(--texto-apoyo); font-weight: 700; }
+.tarjeta-vacante__ubicacion,
+.tarjeta-vacante__horario,
+.tarjeta-vacante__fecha { font-size: var(--texto-apoyo); line-height: 1.6; }
+.tarjeta-vacante__jornada,
+.tarjeta-vacante__sueldo { margin-top: 0.875rem; }
+.tarjeta-vacante__sueldo { line-height: 1.6; }
+.tarjeta-vacante__boton { margin-top: 0.625rem; }
+
+/* ---------- Formularios ---------- */
+.campo-formulario { display: grid; gap: 0.75rem; margin: 0; }
+.campo-formulario label,
+.grupo-opciones legend {
+  font-size: var(--texto-apoyo);
+  font-weight: 700;
+}
+
+.campo-formulario input,
+.campo-formulario select {
+  width: 100%;
+  min-height: var(--alto-control);
+  padding: 0 var(--espacio-m);
+  font-size: var(--texto-base);
+  background-color: var(--color-fondo);
+  border: 2px solid var(--color-borde);
+  border-radius: var(--radio-boton);
+}
+.campo-formulario input::placeholder { color: var(--color-texto-suave); opacity: 1; }
+.campo-formulario input:focus,
+.campo-formulario select:focus { border-color: var(--color-principal); }
+
+.campo-formulario select {
+  appearance: none;
+  padding-right: 3rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23202945' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.25rem;
+}
+
+.grupo-opciones { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; }
+.grupo-opciones legend { padding: 0; margin-bottom: 0.25rem; }
+
+.opcion {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-m);
+  min-height: var(--alto-toque);
+  margin-block: 0.375rem;
+  font-size: var(--texto-base);
+  cursor: pointer;
+}
+.opcion input {
+  appearance: none;
+  flex: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin: 0;
+  background: var(--color-fondo) center / 80% no-repeat;
+  border: 2px solid var(--color-principal);
+  border-radius: 0.375rem;
+}
+.opcion input:checked {
+  background-color: var(--color-principal);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7'/%3E%3C/svg%3E");
+}
+
+.formulario-filtros { display: grid; gap: var(--espacio-ml); }
+.formulario-filtros__acciones { display: grid; gap: var(--espacio-ml); margin: 0; }
+.formulario-filtros__acciones .boton--texto { margin-top: calc(var(--espacio-s) * -1); }
+
+/* ---------- Buscador ---------- */
+.buscador { margin-top: 1.75rem; } /* + row-gap 2rem = 60 px del wireframe móvil */
+.buscador { display: grid; gap: var(--espacio-m); }
+.buscador label { font-size: var(--texto-apoyo); font-weight: 700; margin-bottom: -0.25rem; }
+.buscador input {
+  width: 100%;
+  min-height: var(--alto-control);
+  padding: 0 var(--espacio-m);
+  font-size: var(--texto-base);
+  background: var(--color-fondo);
+  border: 2px solid var(--color-borde);
+  border-radius: var(--radio-boton);
+}
+.buscador input::placeholder { color: var(--color-texto-suave); opacity: 1; }
+.buscador input:focus { border-color: var(--color-principal); }
+.buscador .boton { white-space: nowrap; }
+.nota-ejemplo { font-size: var(--texto-apoyo); }
+
+@media (min-width: 768px) {
+  .buscador { grid-template-columns: minmax(0, 1fr) auto; }
+  .buscador label { grid-column: 1 / -1; }
+}
+@media (min-width: 1024px) {
+  .buscador { margin-top: 0; }
+}
+
+/* ---------- Aviso informativo ---------- */
+.aviso-info {
+  display: flex;
+  gap: var(--espacio-m);
+  align-items: flex-start;
+  padding: var(--espacio-m) 1.25rem;
+  font-size: var(--texto-apoyo);
+  background: var(--color-info-fondo);
+  border-radius: var(--radio-boton);
+}
+.aviso-info .icono { margin-top: 0.125rem; }
+
+/* ---------- Paginación ---------- */
+.paginacion { display: grid; gap: var(--espacio-m); justify-items: center; }
+.paginacion__resumen { font-size: var(--texto-apoyo); }
+.paginacion__lista { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--espacio-m); list-style: none; }
+.paginacion .boton--bloque { justify-self: stretch; }
+
+/* ---------- Botón de ayuda (RF-052) ---------- */
+.boton-ayuda {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-m);
+  width: min(100% - 2rem, var(--ancho-contenedor));
+  min-height: var(--alto-control);
+  margin: var(--espacio-l) auto;
+  padding: var(--espacio-m) var(--espacio-ml);
+  background: var(--color-ayuda);
+  color: var(--color-principal);
+  font-size: var(--texto-base);
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+  border-radius: var(--radio-boton);
+}
+.boton-ayuda:hover { background: var(--color-ayuda-hover); }
+.boton-ayuda__texto span { display: block; }  /* celular: dos líneas */
+
+@media (min-width: 1024px) {
+  .boton-ayuda {
+    position: fixed;
+    right: var(--espacio-l);
+    bottom: var(--espacio-l);
+    z-index: 10;
+    width: auto;
+    margin: 0;
+  }
+  .boton-ayuda__texto span { display: inline; }
+}
+
+/* ---------- Menú del celular ---------- */
+.menu-lista { display: grid; gap: var(--espacio-m); }
+.menu-aviso { margin-top: var(--espacio-ml); }

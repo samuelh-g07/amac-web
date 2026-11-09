@@ -1,0 +1,49 @@
+/* ==========================================================
+   variables.css — Design tokens tomados de la Guía visual (Figma)
+   ========================================================== */
+:root {
+  /* Colores */
+  --color-principal: #202945;        /* azul marino: texto, botones, encabezado */
+  --color-principal-hover: #2f3b63;
+  --color-texto: #202945;
+  --color-texto-suave: #4a5163;      /* placeholders (contraste > 7:1 sobre blanco) */
+  --color-fondo: #ffffff;
+  --color-crema: #fbf7f0;
+  --color-borde: #a8a8a8;
+  --color-borde-suave: #d6cfc4;
+  --color-hover-suave: #eef1f7;
+  --color-ayuda: #ff815c;            /* coral: botón de ayuda / error */
+  --color-ayuda-hover: #ff6f45;
+  --color-logo: #ff7c5f;
+  --color-info-fondo: #cae4ef;
+  --color-foco: #202945;
+
+  /* Tipografía */
+  --fuente-titulos: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  --fuente-base: "Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --texto-base: 1.125rem;   /* 18 px */
+  --texto-apoyo: 1rem;      /* 16 px */
+  --texto-h1: 2rem;         /* 32 px móvil */
+  --texto-h2: 1.5rem;       /* 24 px */
+  --interlineado: 1.5;
+
+  /* Espaciados (múltiplos de 8 px) */
+  --espacio-xs: 0.5rem;
+  --espacio-s: 0.75rem;
+  --espacio-m: 1rem;
+  --espacio-ml: 1.5rem;
+  --espacio-l: 2rem;
+  --espacio-xl: 3rem;
+
+  /* Bordes y tamaños */
+  --radio-boton: 0.75rem;   /* 12 px */
+  --radio-tarjeta: 1rem;
+  --alto-control: 3.5rem;   /* 56 px */
+  --alto-toque: 2.75rem;    /* 44 px mínimo */
+  --ancho-contenedor: 75rem;/* 1200 px */
+  --alto-encabezado: 7rem;  /* 112 px */
+}
+
+@media (min-width: 768px) {
+  :root { --texto-h1: 2.5rem; } /* 40 px escritorio */
+}
