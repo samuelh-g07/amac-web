@@ -1,0 +1,53 @@
+/* Tokens del muestrario AMAC (Figma: Sistema de diseño · Maestros).
+   Fuentes: Libre Baskerville (títulos) y Work Sans (cuerpo y controles). */
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Work+Sans:wght@400;700&display=swap");
+
+:root {
+  /* Colores pintados en los maestros */
+  --color-primario: #202945;
+  --color-primario-oscuro: #202945;
+  --color-acento: #ff815c;
+  --color-texto: #202945;
+  --color-texto-inverso: #ffffff;
+  --color-fondo: #ffffff;
+  --color-superficie: #ffffff;
+  --color-exito: #202945;
+  --color-error: #ff815c;
+  --color-info: #202945;
+  --color-foco: #202945;
+  --color-borde: #a8a8a8;
+
+  --color-fondo-crema: #fbf7f0;
+  --color-borde-calido: #d6cfc4;
+
+  /* Tipografía */
+  --fuente-titulo: "Libre Baskerville", Georgia, serif;
+  --fuente-base: "Work Sans", system-ui, sans-serif;
+  --texto-base: 1.125rem;
+  --texto-apoyo: 1rem;
+  --texto-h1: 2rem;
+  --texto-h1-escritorio: 2.5rem;
+  --texto-h2: 1.5rem;
+  --interlineado: 1.5;
+  --interlineado-titulo: 1.25;
+  --interlineado-marca: 1.1;
+  --rastreo-marca: 0.125rem;
+
+  --espacio-xs: 0.5rem;
+  --espacio-s: 1rem;
+  --espacio-m: 1.5rem;
+  --espacio-l: 2rem;
+  --espacio-xl: 3rem;
+
+  /* Bordes y controles */
+  --radio-control: 0.5rem;
+  --radio: 0.75rem;
+  --radio-tarjeta: 1rem;
+  --radio-etiqueta: 2rem;
+  --alto-control: 3.5rem;
+  --alto-encabezado: 7rem;
+  --ancho-contenido: 75rem;
+  --ancho-filtros: 19rem;
+  --sombra-foco: 0 0 0 4px var(--color-foco);
+}

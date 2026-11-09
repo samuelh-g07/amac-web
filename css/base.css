@@ -1,0 +1,111 @@
+/* Reset, cuerpo, tipografía, enlaces y foco visible. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-base);
+  font-size: var(--texto-base);
+  font-weight: 400;
+  line-height: var(--interlineado);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulo);
+  font-weight: 700;
+  line-height: var(--interlineado-titulo);
+}
+
+h1 {
+  font-size: var(--texto-h1);
+}
+
+h2,
+h3 {
+  font-size: var(--texto-h2);
+  line-height: var(--interlineado);
+}
+
+p + p {
+  margin-top: var(--espacio-xs);
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 4px solid var(--color-foco);
+  outline-offset: 4px;
+}
+
+.saltar-contenido {
+  position: absolute;
+  left: -9999px;
+}
+
+.saltar-contenido:focus {
+  left: var(--espacio-s);
+  top: var(--espacio-s);
+  z-index: 10;
+  background: var(--color-superficie);
+  color: var(--color-texto);
+  padding: var(--espacio-xs) var(--espacio-s);
+}
+
+.texto-apoyo {
+  font-size: var(--texto-apoyo);
+}
+
+.texto-fuerte {
+  font-weight: 700;
+}
+
+.presentacion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-s);
+}
+
+.presentacion__kicker {
+  font-size: var(--texto-base);
+  font-weight: 700;
+  line-height: var(--interlineado);
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: var(--texto-h1-escritorio);
+  }
+}

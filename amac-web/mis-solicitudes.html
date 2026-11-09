@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis solicitudes | AMAC</title>
+  <meta name="description" content="Consulte el estado de sus solicitudes de empleo en AMAC.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+  <header class="encabezado contenedor">
+    <a class="marca" href="index.html">
+      <img class="marca__logo" src="img/logo-amac.png" alt="" width="669" height="333">
+      <span class="marca__texto">
+        <span class="marca__nombre">AMAC</span>
+        <span class="marca__lema">Bolsa de trabajo</span>
+      </span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <a class="menu-movil solo-movil" href="menu.html">
+        <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <span>Menú</span>
+      </a>
+      <ul class="nav-lista">
+        <li><a href="index.html">Vacantes</a></li>
+        <li><a href="mis-solicitudes.html" aria-current="page">Mis solicitudes</a></li>
+        <li><a class="nav-lista__destacado" href="login.html">Iniciar sesión</a></li>
+        <li><a class="nav-lista__destacado" href="#">Cambiar rol</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="principal">
+    <p class="identificador-pagina">SU BÚSQUEDA, PASO A PASO</p>
+    <h1>Mis solicitudes</h1>
+    <p>Aquí puede consultar los empleos a los que se ha postulado y el avance de cada solicitud.</p>
+    <h2>4 solicitudes</h2>
+    <div class="contenedor-solicitudes">
+      <article class="solicitud">
+        <span class="estado-enviada"><img src="enviada-logo.png--CAMBIAR" alt="">Enviada</span>
+        <h3>Recepcionista</h3>
+        <p class="ubicacion">Centro Médico del Valle</p>
+        <p>Col. Del Valle · San Pedro Garza García, N.L.</p>
+        <p>Fecha de postulación:</p>
+        <p><time datetime="2026-10-26">26 de octubre de 2026</time></p>
+        <p>Su solicitud ya está en manos de la empresa.</p>
+        <button class="info-vacante">Ver vacante</button>
+      </article>
+
+      <article class="solicitud">
+        <span class="estado-revision"><img src="revision.logo.png--CAMBIAR" alt="">En revisión</span>
+        <h3>Auxiliar de biblioteca</h3>
+        <p class="ubicacion">Lecturas de la Sierra</p>
+        <p>Col. Obispado · Monterrey, N.L.</p>
+        <p>Fecha de postulación:</p>
+        <p><time datetime="2026-10-23">23 de octubre de 2026</time></p>
+        <p>La empresa está revisando su experiencia.</p>
+        <button class="info-vacante">Ver vacante</button>
+      </article>
+
+      <article class="solicitud">
+        <span class="estado-aceptada"><img src="aceptada.logo.png--CAMBIAR" alt="">Aceptada</span>
+        <h3>Asesor de ventas</h3>
+        <p class="ubicacion">Casa Hogar del Norte</p>
+        <p>Col. Mitras Centro · Monterrey, N.L.</p>
+        <p>Fecha de postulación:</p>
+        <p><time datetime="2026-10-24">24 de octubre de 2026</time></p>
+        <p>La empresa se comunicará con usted para el siguiente paso.</p>
+        <button class="info-vacante">Ver vacante</button>
+      </article>
+
+      <article class="solicitud">
+        <span class="estado-rechazada"><img src="rechazada.logo.png--CAMBIAR" alt="">No seleccionada</span>
+        <h3>Cajero</h3>
+        <p class="ubicacion">Papelería Horizonte</p>
+        <p>Col. Anáhuac · San Nicolás de los Garza, N.L.</p>
+        <p>Fecha de postulación:</p>
+        <p><time datetime="2026-10-22">22 de octubre de 2026</time></p>
+        <p>En esta ocasión la empresa eligió otro perfil. Puede seguir buscando.</p>
+        <button class="info-vacante">Ver vacante</button>
+      </article>
+    </div>
+
+    <button class="enviar">Buscar más vacantes</button>
+  </main>
+
+  <aside>
+    <section class="apoyo">
+      <img src="info.png--CAMBIAR" alt="Símbolo de información">
+      <p>Le avisaremos cuando una empresa actualice su solicitud. No necesita volver a postularse a la misma vacante.</p>
+    </section>
+  </aside>
+
+  <footer class="pie contenedor">
+    <p>AMAC · Empleo para personas de 60 años y más</p>
+    <p>Monterrey y su zona metropolitana, Nuevo León</p>
+  </footer>
+</body>
+</html>

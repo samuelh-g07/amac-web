@@ -1,0 +1,218 @@
+/* Botones, tarjetas, formularios y etiquetas de estatus. */
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--espacio-xs);
+  min-height: var(--alto-control);
+  padding: var(--espacio-xs) var(--espacio-m);
+  border: 2px solid transparent;
+  border-radius: var(--radio);
+  font-family: var(--fuente-base);
+  font-size: var(--texto-base);
+  font-weight: 700;
+  line-height: var(--interlineado);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton:hover {
+  text-decoration: none;
+}
+
+.boton--primario {
+  background: var(--color-primario);
+  color: var(--color-texto-inverso);
+}
+
+.boton--secundario {
+  background: var(--color-superficie);
+  color: var(--color-texto);
+  border-color: var(--color-primario);
+}
+
+.boton--bloque {
+  width: 100%;
+}
+
+.ayuda {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espacio-s);
+  min-height: 3.5rem;
+  padding: var(--espacio-s) var(--espacio-m);
+  border: 0;
+  border-radius: var(--radio);
+  background: var(--color-acento);
+  color: var(--color-texto);
+  font-family: var(--fuente-base);
+  font-size: var(--texto-base);
+  font-weight: 700;
+  line-height: var(--interlineado);
+  text-align: left;
+  text-decoration: none;
+}
+
+.ayuda:hover {
+  text-decoration: none;
+}
+
+.ayuda__icono {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: 0 0 auto;
+}
+
+.tarjeta,
+.tarjeta-vacante {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-m);
+  padding: var(--espacio-m);
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-tarjeta);
+}
+
+.tarjeta-vacante__titulo {
+  font-family: var(--fuente-titulo);
+  font-size: var(--texto-h2);
+  font-weight: 700;
+  line-height: var(--interlineado);
+}
+
+.tarjeta-vacante__empresa,
+.tarjeta-vacante__dato-fuerte {
+  font-weight: 700;
+}
+
+.tarjeta-vacante__datos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-xs);
+  padding: 0;
+  list-style: none;
+}
+
+.etiqueta-estatus {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espacio-xs);
+  width: fit-content;
+  padding: var(--espacio-xs) var(--espacio-s);
+  border: 1px solid var(--color-primario);
+  border-radius: var(--radio-etiqueta);
+  background: var(--color-superficie);
+  color: var(--color-texto);
+  font-size: var(--texto-base);
+  font-weight: 700;
+  line-height: var(--interlineado);
+}
+
+.etiqueta-estatus--enviada,
+.etiqueta-estatus--aceptada {
+  border-color: var(--color-exito);
+}
+
+.etiqueta-estatus--revision,
+.etiqueta-estatus--no-seleccionada {
+  border-color: var(--color-error);
+}
+
+.etiqueta-estatus__icono {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: 0 0 auto;
+}
+
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-xs);
+}
+
+.campo-formulario label,
+.grupo-opciones legend {
+  font-size: var(--texto-base);
+  font-weight: 700;
+  line-height: var(--interlineado);
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+  width: 100%;
+  min-height: var(--alto-control);
+  padding: var(--espacio-xs) var(--espacio-s);
+  border: 2px solid var(--color-borde);
+  border-radius: var(--radio-control);
+  background: var(--color-superficie);
+  color: var(--color-texto);
+  font: inherit;
+}
+
+.campo-formulario textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.campo-formulario input:focus-visible,
+.campo-formulario select:focus-visible,
+.campo-formulario textarea:focus-visible {
+  border-color: var(--color-foco);
+}
+
+.campo-formulario__ayuda {
+  font-size: var(--texto-base);
+  font-weight: 400;
+}
+
+.campo-formulario--error input,
+.campo-formulario--error select,
+.campo-formulario--error textarea {
+  border-color: var(--color-error);
+}
+
+.campo-formulario--error .campo-formulario__ayuda {
+  display: flex;
+  gap: var(--espacio-xs);
+  align-items: flex-start;
+}
+
+.grupo-opciones {
+  border: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-xs);
+}
+
+.opcion {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 3rem;
+}
+
+.opcion input {
+  width: 1.75rem;
+  height: 1.75rem;
+  accent-color: var(--color-primario);
+}
+
+.mensaje {
+  display: flex;
+  gap: var(--espacio-s);
+  align-items: flex-start;
+  padding: var(--espacio-s);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-tarjeta);
+}
+
+.mensaje__icono {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: 0 0 auto;
+}
