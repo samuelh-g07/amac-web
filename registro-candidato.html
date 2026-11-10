@@ -15,7 +15,7 @@
     <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
     <header class="encabezado">
         <div class="marca-header">
-            <img src="ruta--CAMBIAR" alt="Logotipo AMAC" class="logo-header">
+            <img src="img/logo-amac.png" alt="Logotipo AMAC" class="logo-header">
             <div class="textos-marca">
                 <p class="nombre-empresa-nav">AMAC</p>
                 <p class="descripcion-web-nav">Bolsa de trabajo</p>
@@ -36,13 +36,27 @@
             <p>Complete sus datos para postularse a vacantes cerca de usted.</p>
         </section>
 
+        <nav class="pasos-registro" aria-label="Pasos del registro">
+            <ol>
+                <li class="paso">
+                    <a href="#datos-personales"><span class="numero-paso">1</span> Datos personales</a>
+                </li>
+                <li class="paso">
+                    <a href="#contacto"><span class="numero-paso">2</span> Contacto</a>
+                </li>
+                <li class="paso">
+                    <a href="#experiencia-intereses"><span class="numero-paso">3</span> Experiencia e intereses</a>
+                </li>
+            </ol>
+        </nav>
+
         <div class="contenedor-registro-usuario"> <!--junta el formulario y el aside para separarlos en columnas en el css-->
             <div class="formulario-registro">
                 <form method="post" action="perfil-candidato.html">
 
                     <section id="datos-personales">
                         <h2>Datos personales</h2>
-                        <p>Todos los campos de esta sección son obligatorios.</p>
+                        <p>Comencemos con su nombre y fecha de nacimiento. Todos los campos de esta sección son obligatorios.</p>
 
                         <label for="nombre">Nombre completo</label>
                         <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="50"
@@ -71,7 +85,7 @@
 
                         <label for="municipio">Municipio</label>
                         <select id="municipio" name="municipio" required>
-                            <option value="" selected disabled>Elija un municipio</option>
+                            <option value="">Elija un municipio</option>
                             <option value="apodaca">Apodaca</option>
                             <option value="cadereyta">Cadereyta Jiménez</option>
                             <option value="el-carmen">El Carmen</option>
@@ -101,18 +115,18 @@
                         <p>Comparta lo que sabe hacer y el tipo de trabajo que le gustaría encontrar.</p>
 
                         <label for="exp-laboral">Experiencia laboral (opcional)</label>
-                        <input type="text" id="exp-laboral" name="experiencia-laboral" minlength="3" maxlength="200"
-                            placeholder="Cuéntenos en qué ha trabajado o qué sabe hacer.">
+                        <textarea id="exp-laboral" name="experiencia-laboral" rows="4" minlength="3" maxlength="200"
+                            placeholder="Cuéntenos en qué ha trabajado o qué sabe hacer."></textarea>
                         <p>Puede incluir empleos, oficios, trabajo en casa o voluntariado.</p>
 
-                        <h3>Área de interés</h3>
+                        <h3>Áreas de interés</h3>
                         <p>Elija una o más opciones.</p>
 
                         <label><input type="checkbox" name="area-interes" value="atencion-publico">Atención al público</label>
                         <label><input type="checkbox" name="area-interes" value="admin-recepcion">Administración y recepción</label>
                         <label><input type="checkbox" name="area-interes" value="ventas">Ventas</label>
                         <label><input type="checkbox" name="area-interes" value="biblio-educacion">Bibliotecas y educación</label>
-                        <label><input type="checkbox" name="area-interes" value="empaque-apoyo">Empaques y apoyo general</label>
+                        <label><input type="checkbox" name="area-interes" value="empaque-apoyo">Empaque y apoyo general</label>
                         <label><input type="checkbox" name="area-interes" value="att-telefonica">Atención telefónica</label>
                     </section>
 
@@ -128,6 +142,11 @@
                     <img src="info.png--CAMBIAR" alt="Símbolo de información">
                     <p>Su experiencia es valiosa. No necesita un currículum para crear su cuenta.</p>
                 </section>
+                <section class="tarjeta-ritmo">
+                    <h2>Vamos a su ritmo</h2>
+                    <p>Después le pediremos sus datos de contacto y los trabajos que le interesan.</p>
+                    <p>Revise sus datos antes de continuar. Puede regresar al paso anterior.</p>
+                </section>
                 <section class="apoyo">
                     <img src="escudo.png--CAMBIAR" alt="Símbolo de escudo">
                     <p>Sus datos se compartirán con una empresa solo cuando usted se postule a su vacante.</p>
@@ -136,6 +155,10 @@
                     <h2>Cuide su contraseña</h2>
                     <p>Elija una que pueda recordar y no la comparta con otras personas.</p>
                     <p>AMAC nunca le pedirá su contraseña por teléfono.</p>
+                </section>
+                <section class="apoyo">
+                    <img src="info.png--CAMBIAR" alt="Símbolo de información">
+                    <p>No necesita tener experiencia formal. Sus habilidades y lo que ha aprendido también cuentan.</p>
                 </section>
                 <section class="tarjeta-ritmo">
                     <h2>Puede escribir algo así</h2>

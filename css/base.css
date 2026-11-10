@@ -1,0 +1,107 @@
+/* base.css — reset, body, tipografía, enlaces y foco */
+
+/*fuentes de google fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Work+Sans:wght@400;700&display=swap");
+
+/*quito estilos por default del navegador*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*texto base de 18px*/
+body {
+    font-family: var(--fuente-texto);
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: var(--color-principal);
+    background-color: var(--color-fondo);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/*titulo movil de 32px - mobile-first*/
+h1 {
+    font-size: 2rem;
+}
+
+/*subtitulo de 24px*/
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*para que botones y campos usen la fuente del body*/
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/*links sin subrayado, cada clase les da su estilo*/
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*foco visible al navegar con teclado*/
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--color-principal);
+    outline-offset: 2px;
+}
+
+/*escondido hasta que recibe el foco*/
+.saltar-contenido {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-principal);
+    color: white;
+}
+
+.saltar-contenido:focus {
+    top: 1rem;
+}
+
+/* ahora para mas de 768px*/
+
+/*titulo escritorio de 40px*/
+@media (min-width: 768px) {
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+}
