@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cuenta de candidato | AMAC</title>
+    <meta
+      name="description"
+      content="Registre sus datos, experiencia e intereses para encontrar empleo en AMAC.">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/componentes.css">
+  </head>
+  <body>
+    <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+    <header class="encabezado contenedor">
+      <a class="marca-header" href="index.html">
+        <img
+          class="logo-header"
+          src="img/logo-amac.png"
+          alt=""
+          width="669"
+          height="333">
+        <span class="textos-marca">
+          <span class="nombre-empresa-nav">AMAC</span>
+          <span class="descripcion-web-nav">Bolsa de trabajo</span>
+        </span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <a class="menu-movil solo-movil" href="menu.html"><span>Menú</span></a>
+        <ul class="nav-lista">
+          <li><a href="index.html">Vacantes</a></li>
+          <li><a href="mis-solicitudes.html">Mis solicitudes</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="empresa-vacantes.html">Modo empresa</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="principal" class="pagina pagina--angosta contenedor">
+      <header class="cabecera-pagina">
+        <p class="sobretitulo">Registro de candidato</p>
+        <h1>Cuéntenos sobre usted</h1>
+        <p>Complete sus datos de contacto, experiencia e intereses.</p>
+      </header>
+
+      <form class="tarjeta formulario-filtros">
+        <fieldset class="grupo campo-formulario">
+          <legend>Datos personales</legend>
+          <p class="campo-formulario">
+            <label for="nombre">Nombre completo</label>
+            <input
+              id="nombre"
+              name="nombre"
+              type="text"
+              autocomplete="name"
+              required
+              minlength="3">
+          </p>
+          <p class="campo-formulario">
+            <label for="fecha-nacimiento">Fecha de nacimiento</label>
+            <input
+              id="fecha-nacimiento"
+              name="fecha-nacimiento"
+              type="date"
+              autocomplete="bday"
+              min="1900-01-01"
+              max="1966-11-09"
+              title="La fecha debe corresponder a una persona de 60 años o más."
+              required>
+          </p>
+        </fieldset>
+
+        <fieldset class="grupo campo-formulario">
+          <legend>Contacto</legend>
+          <p class="campo-formulario">
+            <label for="telefono">Teléfono (10 dígitos)</label>
+            <input
+              id="telefono"
+              name="telefono"
+              type="tel"
+              autocomplete="tel"
+              inputmode="numeric"
+              pattern="[0-9]{10}"
+              minlength="10"
+              maxlength="10"
+              title="Escriba un número de teléfono de 10 dígitos, sin espacios ni guiones."
+              required>
+          </p>
+          <p class="campo-formulario">
+            <label for="email">Correo electrónico</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required>
+          </p>
+        </fieldset>
+
+        <fieldset class="grupo campo-formulario">
+          <legend>Dirección</legend>
+          <p class="campo-formulario">
+            <label for="direccion">Dirección</label>
+            <input
+              id="direccion"
+              name="direccion"
+              type="text"
+              autocomplete="address-line1"
+              required>
+          </p>
+          <p class="campo-formulario">
+            <label for="municipio">Municipio</label>
+            <select
+              id="municipio"
+              name="municipio"
+              autocomplete="address-level2"
+              required
+            >
+              <option value="" selected disabled>Elija un municipio</option>
+              <option value="Apodaca">Apodaca</option>
+              <option value="Cadereyta Jiménez">Cadereyta Jiménez</option>
+              <option value="García">García</option>
+              <option value="General Escobedo">General Escobedo</option>
+              <option value="Guadalupe">Guadalupe</option>
+              <option value="Juárez">Juárez</option>
+              <option value="Monterrey">Monterrey</option>
+              <option value="San Nicolás de los Garza">
+                San Nicolás de los Garza
+              </option>
+              <option value="San Pedro Garza García">
+                San Pedro Garza García
+              </option>
+              <option value="Santa Catarina">Santa Catarina</option>
+              <option value="Santiago">Santiago</option>
+            </select>
+          </p>
+        </fieldset>
+
+        <fieldset class="grupo campo-formulario">
+          <legend>Experiencia</legend>
+          <p class="campo-formulario">
+            <label for="experiencia">Experiencia laboral</label>
+            <textarea
+              id="experiencia"
+              name="experiencia"
+              rows="5"
+              placeholder="Describa sus trabajos o habilidades."
+            ></textarea>
+          </p>
+        </fieldset>
+
+        <fieldset class="grupo campo-formulario">
+          <legend>Acceso</legend>
+          <p class="campo-formulario">
+            <label for="password">Contraseña</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="new-password"
+              minlength="8"
+              required>
+            <span>Use al menos 8 caracteres.</span>
+          </p>
+        </fieldset>
+
+        <fieldset class="grupo-opciones">
+          <legend>Áreas de interés</legend>
+          <!-- html-validate-disable form-dup-name -->
+          <label class="opcion" for="interes-administracion"
+            ><input
+              id="interes-administracion"
+              type="checkbox"
+              name="intereses"
+              value="administracion">
+            Administración y recepción</label
+          >
+          <label class="opcion" for="interes-ventas"
+            ><input
+              id="interes-ventas"
+              type="checkbox"
+              name="intereses"
+              value="ventas">
+            Ventas</label
+          >
+          <label class="opcion" for="interes-educacion"
+            ><input
+              id="interes-educacion"
+              type="checkbox"
+              name="intereses"
+              value="educacion">
+            Educación y cultura</label
+          >
+          <label class="opcion" for="interes-comercio"
+            ><input
+              id="interes-comercio"
+              type="checkbox"
+              name="intereses"
+              value="comercio">
+            Comercio</label
+          >
+          <label class="opcion" for="interes-logistica"
+            ><input
+              id="interes-logistica"
+              type="checkbox"
+              name="intereses"
+              value="logistica">
+            Logística</label
+          >
+          <label class="opcion" for="interes-atencion"
+            ><input
+              id="interes-atencion"
+              type="checkbox"
+              name="intereses"
+              value="atencion">
+            Atención a clientes</label
+          >
+          <!-- html-validate-enable form-dup-name -->
+        </fieldset>
+
+        <label class="opcion" for="terminos">
+          <input id="terminos" name="terminos" type="checkbox" required>
+          <span>Acepto los términos y el aviso de privacidad.</span>
+        </label>
+
+        <button
+          class="boton boton--primario boton--bloque"
+          type="submit"
+          disabled
+        >
+          Crear cuenta
+        </button>
+        <a class="boton boton--secundario boton--bloque" href="login.html"
+          >Cancelar</a
+        >
+      </form>
+    </main>
+
+    <aside aria-label="Ayuda de AMAC">
+      <a class="ayuda" href="#contacto-amac"
+        >¿Necesita ayuda? Ver contacto de AMAC</a
+      >
+    </aside>
+
+    <footer class="pie contenedor">
+      <p>AMAC · Empleo para personas de 60 años y más</p>
+      <p>Monterrey y su zona metropolitana, Nuevo León</p>
+      <div id="contacto-amac">
+        <p><strong>Ayuda de AMAC</strong></p>
+      </div>
+    </footer>
+  </body>
+</html>

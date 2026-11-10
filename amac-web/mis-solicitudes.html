@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis solicitudes | AMAC</title>
+    <meta
+      name="description"
+      content="Consulte el estado de sus solicitudes de empleo en AMAC.">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/componentes.css">
+  </head>
+  <body>
+    <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+    <header class="encabezado contenedor">
+      <a class="marca-header" href="index.html">
+        <img
+          class="logo-header"
+          src="img/logo-amac.png"
+          alt=""
+          width="669"
+          height="333">
+        <span class="textos-marca">
+          <span class="nombre-empresa-nav">AMAC</span>
+          <span class="descripcion-web-nav">Bolsa de trabajo</span>
+        </span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <a class="menu-movil solo-movil" href="menu.html">
+          <svg
+            class="icono"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <span>Menú</span>
+        </a>
+        <ul class="nav-lista">
+          <li><a href="index.html">Vacantes</a></li>
+          <li>
+            <a href="mis-solicitudes.html" aria-current="page"
+              >Mis solicitudes</a
+            >
+          </li>
+          <li>
+            <a class="nav-lista__destacado" href="login.html">Iniciar sesión</a>
+          </li>
+          <li>
+            <a class="nav-lista__destacado" href="empresa-vacantes.html"
+              >Modo empresa</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="principal" class="pagina contenedor" tabindex="-1">
+      <header class="cabecera-pagina">
+        <p class="sobretitulo">Su búsqueda, paso a paso</p>
+        <h1>Mis solicitudes</h1>
+        <p>
+          Aquí puede consultar los empleos a los que se ha postulado y el avance
+          de cada solicitud.
+        </p>
+      </header>
+      <section class="resultados" aria-labelledby="titulo-solicitudes">
+        <h2 id="titulo-solicitudes">4 solicitudes</h2>
+        <div class="contenedor-solicitudes">
+          <article class="solicitud">
+            <span class="etiqueta-estatus etiqueta-estatus--enviada"
+              >Enviada</span
+            >
+            <h3>Recepcionista</h3>
+            <p class="ubicacion">Centro Médico del Valle</p>
+            <p>Col. Del Valle · San Pedro Garza García, N.L.</p>
+            <p>Fecha de postulación:</p>
+            <p><time datetime="2026-10-26">26 de octubre de 2026</time></p>
+            <p>Su solicitud ya está en manos de la empresa.</p>
+            <a class="boton boton--secundario" href="vacante.html"
+              >Ver vacante</a
+            >
+            <button class="boton boton--secundario" type="button">
+              Cancelar
+            </button>
+          </article>
+
+          <article class="solicitud">
+            <span class="etiqueta-estatus etiqueta-estatus--revision"
+              >En revisión</span
+            >
+            <h3>Auxiliar de biblioteca</h3>
+            <p class="ubicacion">Lecturas de la Sierra</p>
+            <p>Col. Obispado · Monterrey, N.L.</p>
+            <p>Fecha de postulación:</p>
+            <p><time datetime="2026-10-23">23 de octubre de 2026</time></p>
+            <p>La empresa está revisando su experiencia.</p>
+            <button class="boton boton--secundario" type="button">
+              Cancelar
+            </button>
+          </article>
+
+          <article class="solicitud">
+            <span class="etiqueta-estatus etiqueta-estatus--aceptada"
+              >Aceptada</span
+            >
+            <h3>Asesor de ventas</h3>
+            <p class="ubicacion">Casa Hogar del Norte</p>
+            <p>Col. Mitras Centro · Monterrey, N.L.</p>
+            <p>Fecha de postulación:</p>
+            <p><time datetime="2026-10-24">24 de octubre de 2026</time></p>
+            <p>La empresa se comunicará con usted para el siguiente paso.</p>
+          </article>
+
+          <article class="solicitud">
+            <span class="etiqueta-estatus etiqueta-estatus--no-seleccionada"
+              >No seleccionada</span
+            >
+            <h3>Cajero</h3>
+            <p class="ubicacion">Papelería Horizonte</p>
+            <p>Col. Anáhuac · San Nicolás de los Garza, N.L.</p>
+            <p>Fecha de postulación:</p>
+            <p><time datetime="2026-10-22">22 de octubre de 2026</time></p>
+            <p>
+              En esta ocasión la empresa eligió otro perfil. Puede seguir
+              buscando.
+            </p>
+          </article>
+        </div>
+
+        <a class="boton boton--primario" href="index.html"
+          >Buscar más vacantes</a
+        >
+      </section>
+    </main>
+
+    <aside aria-label="Ayuda de AMAC">
+      <a class="ayuda" href="#contacto-amac"
+        >¿Necesita ayuda? Ver contacto de AMAC</a
+      >
+    </aside>
+
+    <footer class="pie contenedor">
+      <p>AMAC · Empleo para personas de 60 años y más</p>
+      <p>Monterrey y su zona metropolitana, Nuevo León</p>
+      <div id="contacto-amac">
+        <p><strong>Ayuda de AMAC</strong></p>
+      </div>
+    </footer>
+  </body>
+</html>
