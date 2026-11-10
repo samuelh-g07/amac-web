@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtrar vacantes | AMAC</title>
+    <meta
+      name="description"
+      content="Elija municipio, tipo de jornada y modalidad para filtrar las vacantes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/componentes.css">
+  </head>
+  <body>
+    <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+    <header class="encabezado contenedor">
+      <a class="marca-header" href="index.html">
+        <img
+          class="logo-header"
+          src="img/logo-amac.png"
+          alt=""
+          width="669"
+          height="333">
+        <span class="textos-marca">
+          <span class="nombre-empresa-nav">AMAC</span>
+          <span class="descripcion-web-nav">Bolsa de trabajo</span>
+        </span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <a class="menu-movil solo-movil" href="menu.html">
+          <svg
+            class="icono"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <span>Menú</span>
+        </a>
+        <ul class="nav-lista">
+          <li><a href="index.html">Vacantes</a></li>
+          <li><a href="mis-solicitudes.html">Mis solicitudes</a></li>
+          <li>
+            <a class="nav-lista__destacado" href="login.html">Iniciar sesión</a>
+          </li>
+          <li>
+            <a class="nav-lista__destacado" href="empresa-vacantes.html"
+              >Modo empresa</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="principal" class="pagina pagina--angosta contenedor">
+      <header class="cabecera-pagina">
+        <p class="sobretitulo">Búsqueda de empleo</p>
+        <h1>Filtrar vacantes</h1>
+        <p>
+          Elija las opciones que le convengan. Puede dejar campos sin
+          seleccionar.
+        </p>
+      </header>
+
+      <form class="tarjeta formulario-filtros">
+        <p class="campo-formulario">
+          <label for="municipio">Municipio</label>
+          <select id="municipio" name="municipio">
+            <option value="">Todos los municipios</option>
+            <option value="Monterrey">Monterrey</option>
+            <option value="San Pedro Garza García">
+              San Pedro Garza García
+            </option>
+            <option value="Guadalupe">Guadalupe</option>
+            <option value="San Nicolás de los Garza">
+              San Nicolás de los Garza
+            </option>
+            <option value="Apodaca">Apodaca</option>
+            <option value="Santa Catarina">Santa Catarina</option>
+            <option value="General Escobedo">General Escobedo</option>
+          </select>
+        </p>
+
+        <p class="campo-formulario">
+          <label for="categoria">Categoría</label>
+          <select id="categoria" name="categoria">
+            <option value="">Todas las categorías</option>
+            <option value="administracion">Administración y recepción</option>
+            <option value="ventas">Ventas</option>
+            <option value="educacion">Educación y cultura</option>
+            <option value="comercio">Comercio</option>
+            <option value="logistica">Logística</option>
+            <option value="atencion">Atención a clientes</option>
+          </select>
+        </p>
+
+        <p class="campo-formulario">
+          <label for="horario">Horario</label>
+          <select id="horario" name="horario">
+            <option value="">Cualquier horario</option>
+            <option value="manana">Mañana (antes de las 14:00)</option>
+            <option value="dia">Día (hasta las 17:00)</option>
+            <option value="tarde">Tarde (desde las 10:00)</option>
+          </select>
+        </p>
+
+        <fieldset class="grupo-opciones">
+          <legend>Tipo de jornada</legend>
+          <!-- html-validate-disable form-dup-name -->
+          <label class="opcion" for="jornada-completo">
+            <input
+              type="checkbox"
+              id="jornada-completo"
+              name="jornada"
+              value="tiempo-completo">
+            <span>Tiempo completo</span>
+          </label>
+          <label class="opcion" for="jornada-medio">
+            <input
+              type="checkbox"
+              id="jornada-medio"
+              name="jornada"
+              value="medio-tiempo">
+            <span>Medio tiempo</span>
+          </label>
+          <label class="opcion" for="jornada-horas">
+            <input
+              type="checkbox"
+              id="jornada-horas"
+              name="jornada"
+              value="por-horas">
+            <span>Por horas</span>
+          </label>
+          <!-- html-validate-enable form-dup-name -->
+        </fieldset>
+
+        <fieldset class="grupo-opciones">
+          <legend>Modalidad</legend>
+          <!-- html-validate-disable form-dup-name -->
+          <label class="opcion" for="modalidad-presencial">
+            <input
+              type="checkbox"
+              id="modalidad-presencial"
+              name="modalidad"
+              value="presencial">
+            <span>Presencial</span>
+          </label>
+          <label class="opcion" for="modalidad-casa">
+            <input
+              type="checkbox"
+              id="modalidad-casa"
+              name="modalidad"
+              value="desde-casa">
+            <span>Desde casa</span>
+          </label>
+          <!-- html-validate-enable form-dup-name -->
+        </fieldset>
+
+        <p class="formulario-filtros__acciones">
+          <button class="boton boton--primario boton--bloque" type="button">
+            Aplicar filtros
+          </button>
+          <button class="boton boton--secundario boton--bloque" type="reset">
+            Limpiar filtros
+          </button>
+          <a class="boton boton--secundario boton--bloque" href="index.html"
+            >Cancelar y regresar</a
+          >
+        </p>
+      </form>
+    </main>
+
+    <aside aria-label="Ayuda de AMAC">
+      <a class="ayuda" href="#contacto-amac"
+        >¿Necesita ayuda? Ver contacto de AMAC</a
+      >
+    </aside>
+
+    <footer class="pie contenedor">
+      <p>AMAC · Empleo para personas de 60 años y más</p>
+      <p>Monterrey y su zona metropolitana, Nuevo León</p>
+      <div id="contacto-amac">
+        <p><strong>Ayuda de AMAC</strong></p>
+      </div>
+    </footer>
+  </body>
+</html>

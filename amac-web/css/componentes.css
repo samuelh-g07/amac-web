@@ -1,0 +1,368 @@
+/* Botones */
+.boton {
+  justify-content: center;
+  gap: var(--espacio-chico);
+  max-width: 100%;
+  min-height: var(--altura-control);
+  padding: 0.5rem 1.5rem;
+  border: 2px solid var(--color-principal);
+  border-radius: var(--radio);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  background: var(--color-fondo);
+}
+
+.boton--primario {
+  background: var(--color-principal);
+  color: #ffffff;
+}
+
+.boton--secundario {
+  background: #ffffff;
+  color: var(--color-principal);
+}
+
+.boton--bloque {
+  width: 100%;
+}
+
+.boton:hover {
+  text-decoration: underline;
+}
+
+/* Tarjetas y paneles */
+.tarjeta,
+.panel,
+.vacante,
+.solicitud,
+.resumen,
+.mensaje-pagina {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-mediano);
+  min-width: 0;
+  margin: 0;
+  padding: var(--espacio-mediano);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-tarjeta);
+  background: var(--color-fondo);
+}
+
+.vacante__empresa,
+.vacante__jornada,
+.vacante__sueldo,
+.dato-fuerte {
+  font-weight: 700;
+}
+
+.resumen__numero {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.vacante__meta,
+.vacante__datos {
+  display: grid;
+  gap: var(--espacio-chico);
+  padding: 0;
+  list-style: none;
+}
+
+/* Iconos y mensajes */
+.icono {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+
+.aviso-info,
+.mensaje-info,
+.dato-con-icono {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--espacio);
+}
+
+.aviso-info,
+.mensaje-info {
+  padding: var(--espacio);
+  background: var(--color-info-fondo);
+  border-radius: var(--radio);
+}
+
+/* Formularios */
+.campo-formulario,
+.buscador,
+.formulario-filtros,
+.formulario-filtros__acciones,
+.menu-lista {
+  display: grid;
+  gap: var(--espacio);
+}
+
+.campo-formulario {
+  gap: var(--espacio-chico);
+}
+
+label,
+legend {
+  font-weight: 700;
+}
+
+legend {
+  margin-bottom: var(--espacio-chico);
+  padding: 0;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: var(--altura-control);
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--color-borde-campo);
+  border-radius: var(--radio-campo);
+  background: var(--color-fondo);
+}
+
+textarea {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+::placeholder {
+  color: var(--color-principal);
+  opacity: 1;
+}
+
+.grupo,
+.grupo-opciones {
+  display: grid;
+  gap: var(--espacio-chico);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.opcion,
+.casilla {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio);
+  min-height: 3rem;
+}
+
+.opcion,
+.casilla label {
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.casilla label {
+  display: flex;
+  align-items: center;
+  min-height: 3rem;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: 2.75rem;
+  height: 2.75rem;
+  min-height: 2.75rem;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+  accent-color: var(--color-principal);
+}
+
+.campo-formulario--error input {
+  border-color: var(--color-error);
+}
+
+.error {
+  color: var(--color-error);
+}
+
+/* Estados: siempre acompañados de texto */
+.etiqueta-estatus {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espacio-chico);
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-principal);
+  border-radius: 2rem;
+  font-weight: 700;
+}
+
+.etiqueta-estatus--revision,
+.etiqueta-estatus--pausada,
+.etiqueta-estatus--no-seleccionada {
+  border-color: var(--color-ayuda);
+}
+
+.etiqueta-estatus--cerrada {
+  border-color: var(--color-borde);
+}
+
+/* Acciones y paginación */
+.enlace-accion,
+.acciones-texto button,
+.boton--texto {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-principal);
+  text-align: left;
+  text-decoration: underline;
+}
+
+.acciones-texto,
+.paginacion__lista,
+.paginacion__paginas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio);
+  padding: 0;
+  list-style: none;
+}
+
+.acciones-texto {
+  flex-direction: column;
+  gap: var(--espacio-chico);
+}
+
+.paginacion {
+  display: grid;
+  gap: var(--espacio);
+}
+
+/* Ayuda en flujo normal, para no tapar contenido */
+.ayuda {
+  display: flex;
+  gap: var(--espacio);
+  width: calc(100% - 2rem);
+  max-width: var(--ancho-contenido);
+  margin: 1.5rem auto;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radio);
+  background: var(--color-ayuda);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.ayuda__texto span {
+  display: block;
+}
+
+/* Etapas del registro */
+.etapas {
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.etapa {
+  padding: 1rem;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+.etapa--actual {
+  background: var(--color-principal);
+  color: #ffffff;
+}
+
+/* Tabla presentada como fichas en celular */
+.tabla-vacantes,
+.tabla-vacantes tbody,
+.tabla-vacantes tr,
+.tabla-vacantes td {
+  display: block;
+  width: 100%;
+}
+
+.tabla-vacantes {
+  border-collapse: collapse;
+}
+
+.tabla-vacantes tr {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-tarjeta);
+}
+
+.tabla-vacantes td {
+  padding-block: 0.5rem;
+}
+
+.tabla-vacantes td::before {
+  content: attr(data-titulo);
+  display: block;
+  font-weight: 700;
+}
+
+@media (min-width: 48rem) {
+  .buscador {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+  }
+
+  .buscador > label {
+    grid-column: 1 / -1;
+  }
+
+  .etapas {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ayuda__texto span {
+    display: inline;
+  }
+}
+
+/* Tabla completa cuando existe espacio suficiente */
+@media (min-width: 80rem) {
+  .tabla-vacantes {
+    display: table;
+  }
+
+  .tabla-vacantes thead {
+    position: static;
+    display: table-header-group;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+    white-space: normal;
+    background: var(--color-info-fondo);
+  }
+
+  .tabla-vacantes tbody {
+    display: table-row-group;
+  }
+
+  .tabla-vacantes tr {
+    display: table-row;
+    border: 0;
+  }
+
+  .tabla-vacantes th,
+  .tabla-vacantes td {
+    display: table-cell;
+    width: auto;
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-borde);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .tabla-vacantes td::before {
+    content: none;
+  }
+}

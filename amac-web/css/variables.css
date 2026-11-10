@@ -1,0 +1,33 @@
+:root {
+  /* Colores de la revisión de Figma */
+  --color-principal: #202945;
+  --color-ayuda: #ff815c;
+  --color-fondo: #ffffff;
+  --color-info-fondo: #cae4ef;
+  --color-borde: #a8a8a8;
+
+  /* Ajustes para accesibilidad */
+  --color-borde-campo: #767676;
+  --color-error: #b3261e;
+  --color-foco: #202945;
+
+  /* Tipografía */
+  --fuente-texto: "Work Sans", Arial, sans-serif;
+  --fuente-titulos: "Libre Baskerville", Georgia, serif;
+  --texto-base: 1.125rem;
+  --texto-h1: 2rem;
+  --texto-h2: 1.5rem;
+
+  /* Espaciados */
+  --espacio-chico: 0.5rem;
+  --espacio: 1rem;
+  --espacio-mediano: 1.5rem;
+  --espacio-grande: 2rem;
+
+  /* Bordes y tamaños */
+  --radio-campo: 0.5rem;
+  --radio: 0.75rem;
+  --radio-tarjeta: 1rem;
+  --ancho-contenido: 75rem;
+  --altura-control: 3.5rem;
+}

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis vacantes | AMAC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&amp;family=Work+Sans:wght@400;700&amp;display=swap">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/componentes.css">
+  </head>
+
+  <body>
+    <a class="saltar-contenido" href="#principal"> Saltar al contenido </a>
+
+    <header class="encabezado contenedor">
+      <a class="marca-header" href="index.html">
+        <img
+          class="logo-header"
+          src="img/logo-amac.png"
+          alt=""
+          width="669"
+          height="333">
+
+        <span class="textos-marca">
+          <span class="nombre-empresa-nav">AMAC</span>
+          <span class="descripcion-web-nav">Bolsa de trabajo</span>
+        </span>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <a class="menu-movil solo-movil" href="menu.html"> Menú </a>
+
+        <ul class="nav-lista">
+          <li><a href="index.html">Vacantes</a></li>
+          <li><a href="mis-solicitudes.html">Mis solicitudes</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
+          <li>
+            <a href="empresa-vacantes.html" aria-current="page">
+              Modo empresa
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="principal" class="pagina contenedor" tabindex="-1">
+      <nav aria-label="Navegación de empresa">
+        <ul class="nav-seccion__lista">
+          <li>
+            <a href="empresa-vacantes.html" aria-current="page">
+              Mis vacantes
+            </a>
+          </li>
+          <li><a href="login.html">Cerrar sesión</a></li>
+        </ul>
+      </nav>
+
+      <header class="cabecera-pagina">
+        <p class="sobretitulo">Espacio de empresa</p>
+        <h1>Mis vacantes</h1>
+        <p>
+          Administre sus publicaciones y conozca a quienes desean trabajar con
+          usted.
+        </p>
+        <p class="dato-fuerte">Centro Médico del Valle</p>
+        <p>Col. Del Valle · San Pedro Garza García, Nuevo León</p>
+      </header>
+
+      <p>
+        <button class="boton boton--primario" type="button">
+          + Publicar nueva vacante
+        </button>
+      </p>
+
+      <section class="resumenes" aria-label="Resumen de publicaciones">
+        <div class="tarjeta resumen">
+          <p class="resumen__numero">1</p>
+          <h2>Vacantes activas</h2>
+        </div>
+
+        <div class="tarjeta resumen">
+          <p class="resumen__numero">2</p>
+          <h2>Solicitudes nuevas</h2>
+        </div>
+
+        <div class="tarjeta resumen">
+          <p class="resumen__numero">1</p>
+          <h2>Vacantes cerradas</h2>
+        </div>
+      </section>
+
+      <section class="resultados" aria-labelledby="titulo-vacantes">
+        <h2 id="titulo-vacantes">3 vacantes en total</h2>
+        <p>
+          1 activa, 1 pausada y 1 cerrada. Tiene 3 solicitudes; 2 son nuevas.
+        </p>
+        <p>Datos de ejemplo: la empresa y las vacantes son ficticias.</p>
+
+        <table class="tabla-vacantes">
+          <caption class="solo-lectores">
+            Vacantes publicadas por Centro Médico del Valle
+          </caption>
+
+          <thead>
+            <tr>
+              <th scope="col">Puesto</th>
+              <th scope="col">Publicación</th>
+              <th scope="col">Solicitudes</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td data-titulo="Puesto">
+                <p class="dato-fuerte">Recepcionista</p>
+                <p>Medio tiempo · Presencial</p>
+              </td>
+
+              <td data-titulo="Publicación">
+                <time datetime="2026-10-24">24 oct 2026</time>
+              </td>
+
+              <td data-titulo="Solicitudes">2</td>
+
+              <td data-titulo="Estado">
+                <span class="etiqueta-estatus">Activa</span>
+              </td>
+
+              <td data-titulo="Acciones">
+                <ul class="acciones-texto">
+                  <li>
+                    <button type="button">
+                      Editar
+                      <span class="solo-lectores">Recepcionista</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button">
+                      Ver solicitudes
+                      <span class="solo-lectores"> de Recepcionista </span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button">
+                      Pausar
+                      <span class="solo-lectores">Recepcionista</span>
+                    </button>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td data-titulo="Puesto">
+                <p class="dato-fuerte">Auxiliar de archivo</p>
+                <p>Medio tiempo · Presencial</p>
+              </td>
+
+              <td data-titulo="Publicación">
+                <time datetime="2026-10-23">23 oct 2026</time>
+              </td>
+
+              <td data-titulo="Solicitudes">1</td>
+
+              <td data-titulo="Estado">
+                <span class="etiqueta-estatus etiqueta-estatus--pausada">
+                  Pausada
+                </span>
+              </td>
+
+              <td data-titulo="Acciones">
+                <ul class="acciones-texto">
+                  <li>
+                    <button type="button">
+                      Editar
+                      <span class="solo-lectores"> Auxiliar de archivo </span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button">
+                      Ver solicitudes
+                      <span class="solo-lectores">
+                        de Auxiliar de archivo
+                      </span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button">
+                      Reanudar
+                      <span class="solo-lectores"> Auxiliar de archivo </span>
+                    </button>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td data-titulo="Puesto">
+                <p class="dato-fuerte">Orientador de pacientes</p>
+                <p>Medio tiempo · Presencial</p>
+              </td>
+
+              <td data-titulo="Publicación">
+                <time datetime="2026-10-20">20 oct 2026</time>
+              </td>
+
+              <td data-titulo="Solicitudes">0</td>
+
+              <td data-titulo="Estado">
+                <span class="etiqueta-estatus etiqueta-estatus--cerrada">
+                  Cerrada
+                </span>
+              </td>
+
+              <td data-titulo="Acciones">
+                <ul class="acciones-texto">
+                  <li>
+                    <button type="button">
+                      Ver solicitudes
+                      <span class="solo-lectores">
+                        de Orientador de pacientes
+                      </span>
+                    </button>
+                  </li>
+                  <li>No recibe solicitudes</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <p class="aviso-info">
+        Al pausar una vacante deja de recibir solicitudes nuevas. Puede
+        reanudarla cuando lo necesite.
+      </p>
+    </main>
+
+    <aside aria-label="Ayuda de AMAC">
+      <a class="ayuda" href="#contacto-amac">
+        <span>¿Necesita ayuda? Ver contacto de AMAC</span>
+      </a>
+    </aside>
+
+    <footer class="pie contenedor">
+      <p>AMAC · Empleo para personas de 60 años y más</p>
+      <p>Monterrey y su zona metropolitana, Nuevo León</p>
+
+      <div id="contacto-amac">
+        <p><strong>Ayuda de AMAC</strong></p>
+      </div>
+    </footer>
+  </body>
+</html>

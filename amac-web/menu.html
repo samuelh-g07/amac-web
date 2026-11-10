@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú | AMAC</title>
+    <meta
+      name="description"
+      content="Menú de navegación de AMAC Bolsa de trabajo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/componentes.css">
+  </head>
+  <body>
+    <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+    <header class="encabezado contenedor">
+      <a class="marca-header" href="index.html">
+        <img
+          class="logo-header"
+          src="img/logo-amac.png"
+          alt=""
+          width="669"
+          height="333">
+        <span class="textos-marca">
+          <span class="nombre-empresa-nav">AMAC</span>
+          <span class="descripcion-web-nav">Bolsa de trabajo</span>
+        </span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <a class="menu-movil solo-movil" href="menu.html">
+          <svg
+            class="icono"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <span>Menú</span>
+        </a>
+        <ul class="nav-lista">
+          <li><a href="index.html">Vacantes</a></li>
+          <li><a href="mis-solicitudes.html">Mis solicitudes</a></li>
+          <li>
+            <a class="nav-lista__destacado" href="login.html">Iniciar sesión</a>
+          </li>
+          <li>
+            <a class="nav-lista__destacado" href="empresa-vacantes.html"
+              >Modo empresa</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="principal" class="pagina pagina--angosta contenedor">
+      <header class="cabecera-pagina">
+        <p class="sobretitulo">Navegación</p>
+        <h1>Menú</h1>
+      </header>
+
+      <nav class="tarjeta menu-lista" aria-label="Menú de secciones">
+        <a class="boton boton--secundario boton--bloque" href="index.html"
+          >Cerrar menú</a
+        >
+        <a class="boton boton--primario boton--bloque" href="index.html"
+          >Vacantes</a
+        >
+        <a
+          class="boton boton--secundario boton--bloque"
+          href="mis-solicitudes.html"
+          >Mis solicitudes</a
+        >
+        <a class="boton boton--secundario boton--bloque" href="login.html"
+          >Iniciar sesión</a
+        >
+        <a
+          class="boton boton--secundario boton--bloque"
+          href="empresa-vacantes.html"
+          >Modo empresa</a
+        >
+      </nav>
+
+      <p class="aviso-info menu-aviso">
+        <svg
+          class="icono"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <circle cx="12" cy="12" r="9.5" />
+          <path d="M12 11v5.5" />
+          <circle cx="12" cy="7.75" r="0.6" fill="currentColor" />
+        </svg>
+        <span
+          >Encuentre empleo y dé seguimiento a sus solicitudes desde este
+          menú.</span
+        >
+      </p>
+    </main>
+
+    <aside aria-label="Ayuda de AMAC">
+      <a class="ayuda" href="#contacto-amac"
+        >¿Necesita ayuda? Ver contacto de AMAC</a
+      >
+    </aside>
+
+    <footer class="pie contenedor">
+      <p>AMAC · Empleo para personas de 60 años y más</p>
+      <p>Monterrey y su zona metropolitana, Nuevo León</p>
+      <div id="contacto-amac">
+        <p><strong>Ayuda de AMAC</strong></p>
+      </div>
+    </footer>
+  </body>
+</html>

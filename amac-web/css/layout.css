@@ -1,0 +1,256 @@
+/* Margen mínimo de 16 px y contenido máximo de 1200 px */
+.contenedor {
+  padding-inline: max(1rem, calc((100% - var(--ancho-contenido)) / 2));
+}
+
+/* Encabezados de las dos versiones existentes del HTML */
+.encabezado,
+.encabezado__interno {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacio);
+}
+
+.encabezado {
+  padding-block: var(--espacio-mediano);
+  background: var(--color-principal);
+  color: #ffffff;
+}
+
+.encabezado__interno {
+  width: 100%;
+}
+
+.marca-header {
+  gap: 0.75rem;
+  max-width: 100%;
+  text-decoration: none;
+}
+
+.logo-header {
+  width: 5rem;
+  flex-shrink: 0;
+}
+
+.textos-marca {
+  display: grid;
+  min-width: 0;
+}
+
+.nombre-empresa-nav,
+.nav-lista__destacado {
+  font-weight: 700;
+}
+
+/* Navegación */
+.nav-lista,
+.nav-principal__lista,
+.nav-seccion__lista {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: var(--espacio);
+}
+
+.nav-lista,
+.nav-principal {
+  display: none;
+}
+
+.nav-principal {
+  width: 100%;
+}
+
+.nav-principal__lista {
+  display: grid;
+}
+
+.nav-seccion__lista {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.encabezado nav a {
+  text-decoration: none;
+}
+
+.encabezado nav a:hover {
+  text-decoration: underline;
+}
+
+a[aria-current="page"] {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.menu-movil,
+.menu__boton {
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.menu__boton {
+  display: inline-flex;
+  min-height: 2.75rem;
+}
+
+/* Compatibilidad con el menú de la rama mis-solicitudes */
+.menu-control:checked ~ .nav-principal {
+  display: block;
+}
+
+.menu-control:focus-visible + .menu__boton {
+  outline: 4px solid #ffffff;
+}
+
+/* Contenido */
+.pagina,
+.principal {
+  padding-block: var(--espacio-grande);
+}
+
+.pagina,
+.principal > .contenedor {
+  display: grid;
+  gap: var(--espacio-grande);
+}
+
+.pagina--angosta {
+  --ancho-contenido: 40rem;
+}
+
+.pagina--listado {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.cabecera-pagina,
+.presentacion {
+  display: grid;
+  gap: var(--espacio);
+}
+
+.cabecera-pagina,
+.buscador,
+.nota-ejemplo {
+  grid-column: 1 / -1;
+}
+
+.sobretitulo,
+.kicker {
+  font-weight: 700;
+}
+
+.sobretitulo {
+  text-transform: uppercase;
+}
+
+.panel-lateral {
+  display: none;
+}
+
+/* Rejillas: una columna en celular */
+.lista-vacantes,
+.contenedor-solicitudes,
+.resumenes,
+.resultados,
+.resultados-y-filtros,
+.rejilla-2,
+.rejilla-detalle,
+.rejilla-formulario,
+.pila,
+.pila-amplia,
+.bloque-texto {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espacio-mediano);
+  min-width: 0;
+}
+
+.lista-vacantes {
+  padding: 0;
+  list-style: none;
+}
+
+.lista-vacantes > li {
+  min-width: 0;
+}
+
+/* Pie */
+.pie {
+  padding-block: var(--espacio-mediano);
+  border-top: 1px solid var(--color-borde);
+}
+
+.pie p + p,
+.pie__interno > * + *,
+#contacto-amac {
+  margin-top: var(--espacio-chico);
+}
+
+/* Tablet */
+@media (min-width: 48rem) {
+  .lista-vacantes,
+  .contenedor-solicitudes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .resumenes {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Escritorio */
+@media (min-width: 64rem) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .pagina,
+  .principal {
+    padding-block: 3rem;
+  }
+
+  .logo-header {
+    width: 6rem;
+  }
+
+  .solo-movil,
+  .menu__boton,
+  .menu-control {
+    display: none;
+  }
+
+  .nav-lista,
+  .nav-principal__lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
+
+  .nav-principal {
+    display: block;
+    width: auto;
+  }
+
+  .pagina--listado,
+  .resultados-y-filtros {
+    grid-template-columns: 19rem minmax(0, 1fr);
+    align-items: start;
+    gap: var(--espacio-grande);
+  }
+
+  .panel-lateral {
+    display: grid;
+    gap: var(--espacio-mediano);
+  }
+
+  .rejilla-2,
+  .rejilla-detalle,
+  .rejilla-formulario {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    align-items: start;
+    gap: var(--espacio-grande);
+  }
+}
